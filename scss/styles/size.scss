@@ -1,0 +1,76 @@
+// Width ======================================
+
+@mixin widthCreate ($coficent, $counts) {
+  @for $count from 0 to $counts {
+    .w-#{$count * 5} { width: $coficent * $count; }
+  }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .w-#{$count * 5}-XS { width: $coficent * $count; }
+    }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .w-#{$count * 5}-S { width: $coficent * $count; }
+    }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .w-#{$count * 5}-M { width: $coficent * $count; }
+    }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .w-#{$count * 5}-L { width: $coficent * $count; }
+    }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .w-#{$count * 5}-XL { width: $coficent * $count; }
+    }
+  }
+};
+
+// Start Width
+@include widthCreate(5%, 21);
+
+.w-auto{ width: auto; }
+
+.h-auto{ height: auto; }
+
+
+// Height ======================================
+
+@mixin heightCreate ($coficent, $counts) {
+  @for $count from 0 to $counts {
+    .h-#{$count * 5} { height: $coficent * $count; }
+  }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .h-#{$count * 5}-XS { height: $coficent * $count; }
+    }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .h-#{$count * 5}-S { height: $coficent * $count; }
+    }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .h-#{$count * 5}-M { height: $coficent * $count; }
+    }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .h-#{$count * 5}-L { height: $coficent * $count; }
+    }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .h-#{$count * 5}-XL { height: $coficent * $count; }
+    }
+  }
+};
+
+// Start Height
+@include heightCreate(5%, 21);

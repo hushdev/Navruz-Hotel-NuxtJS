@@ -1,0 +1,319 @@
+// Font ===================================================
+$bold: 600;
+$medium: 500;
+$normal: 400;
+
+@mixin fontCreate ($size, $coficent, $counts) {
+  @for $count from 0 to $counts {
+    .fs-#{$count} {
+      font-size: $size * ($coficent * $count);
+    }
+  }
+
+  .fw-b {
+    font-weight: $bold
+  }
+
+  .fw-m {
+    font-weight: $medium
+  }
+
+  .fw-n {
+    font-weight: $normal
+  }
+
+  .ta-l {
+    text-align: left;
+  }
+
+  .ta-c {
+    text-align: center;
+  }
+
+  .ta-r {
+    text-align: right;
+  }
+
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .fs#{$count}-XS {
+        font-size: $size * ($coficent * $count);
+      }
+    }
+
+    .fw-b-XS {
+      font-weight: $bold
+    }
+
+    .fw-m-XS {
+      font-weight: $medium
+    }
+
+    .fw-n-XS {
+      font-weight: $normal
+    }
+
+    .ta-l-XS {
+      text-align: left;
+    }
+
+    .ta-c-XS {
+      text-align: center;
+    }
+
+    .ta-r-XS {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .fs-#{$count}-S {
+        font-size: $size * ($coficent * $count);
+      }
+    }
+
+    .fw-b-S {
+      font-weight: $bold
+    }
+
+    .fw-m-S {
+      font-weight: $medium
+    }
+
+    .fw-n-S {
+      font-weight: $normal
+    }
+
+    .ta-l-S {
+      text-align: left;
+    }
+
+    .ta-c-S {
+      text-align: center;
+    }
+
+    .ta-r-S {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .fs-#{$count}-M {
+        font-size: $size * ($coficent * $count);
+      }
+    }
+
+    .fw-b-M {
+      font-weight: $bold
+    }
+
+    .fw-m-M {
+      font-weight: $medium
+    }
+
+    .fw-n-M {
+      font-weight: $normal
+    }
+
+    .ta-l-M {
+      text-align: left;
+    }
+
+    .ta-c-M {
+      text-align: center;
+    }
+
+    .ta-r-M {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .fs-#{$count}-L {
+        font-size: $size * ($coficent * $count);
+      }
+    }
+
+    .fw-b-L {
+      font-weight: $bold
+    }
+
+    .fw-m-L {
+      font-weight: $medium
+    }
+
+    .fw-n-L {
+      font-weight: $normal
+    }
+
+    .ta-l-L {
+      text-align: left;
+    }
+
+    .ta-c-L {
+      text-align: center;
+    }
+
+    .ta-r-L {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .fs-#{$count}-XL {
+        font-size: $size * ($coficent * $count);
+      }
+    }
+
+    .fw-b-XL {
+      font-weight: $bold
+    }
+
+    .fw-m-XL {
+      font-weight: $medium
+    }
+
+    .fw-n-XL {
+      font-weight: $normal
+    }
+
+    .ta-l-XL {
+      text-align: left;
+    }
+
+    .ta-c-XL {
+      text-align: center;
+    }
+
+    .ta-r-XL {
+      text-align: right;
+    }
+  }
+}
+
+;
+
+// Start Font
+@include fontCreate(2.5rem, 0.1, 7);
+
+// Line Height ======================================
+
+@mixin lineHeightCreate ($size, $coficent, $counts) {
+  @for $count from 0 to $counts {
+    .f-lh-#{$count} {
+      line-height: $size * ($coficent * $count);
+    }
+  }
+
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .f-lh-#{$count}-XS {
+        line-height: $size * ($coficent * $count);
+      }
+    }
+  }
+
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .f-lh-#{$count}-S {
+        line-height: $size * ($coficent * $count);
+      }
+    }
+  }
+
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .f-lh-#{$count}-M {
+        line-height: $size * ($coficent * $count);
+      }
+    }
+  }
+
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .f-lh-#{$count}-L {
+        line-height: $size * ($coficent * $count);
+      }
+    }
+  }
+
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .f-lh-#{$count}-XL {
+        line-height: $size * ($coficent * $count);
+      }
+    }
+  }
+}
+
+;
+
+// Start Line Height
+@include lineHeightCreate(1rem, 0.5, 7);
+
+.h1 {
+  font-size: 41px;
+
+  span {
+    background: #ffffff;
+    padding: 5px 15px;
+  }
+}
+
+.h2 {
+  font-size: 34px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.h2-decor {
+  font-size: 34px;
+  position: relative;
+  margin-bottom: 70px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 183px;
+    height: 4px;
+    background: #282828;
+  }
+}
+
+.h3 {
+  font-size: 20px;
+  line-height: 24.3px;
+}
+
+.h3-decor {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    left: 0;
+    width: 63px;
+    height: 2px;
+    background: #B99470;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.text-S {
+  font-size: 14px;
+}
+
+.decor-n {
+  text-decoration: none;
+}

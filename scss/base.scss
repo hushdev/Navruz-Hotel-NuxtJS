@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+// Sizes
+$small: 480px;
+$medium: 834px;
+$large: 1280px;
+$xlarge: 1903px;
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  background: rgb(204, 204, 204);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto !important;
+}
+
+.shadow {
+  box-shadow: 0px 5px 29px rgba(97, 97, 97, 0.25);
+}
+
+div {
+  display: block;
+}
+
+.bs {
+  box-shadow: 0 0.3vw 0.3vw #999;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.d-iblock {
+  display: inline-block;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+// Import Styles
+@import './styles/reset.scss';
+@import './styles/colors.scss';
+@import './styles/font.scss';
+@import './styles/spacing.scss';
+@import './styles/flex.scss';
+@import './styles/size.scss';
+@import './styles/position.scss';

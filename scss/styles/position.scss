@@ -1,0 +1,61 @@
+.center{margin: 0 auto;}
+
+// Postiion ======================================
+
+@mixin positionCreate ($coficent, $counts) {
+  @for $count from 0 to $counts {
+    .l-#{$count * 5} { left: $coficent * $count; }
+    .t-#{$count * 5} { top: $coficent * $count; }
+    .r-#{$count * 5} { bottom: $coficent * $count; }
+    .b-#{$count * 5} { right: $coficent * $count; }
+  }
+  .abs{ position: absolute; }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5} { left: $coficent * $count; }
+      .t-#{$count * 5} { top: $coficent * $count; }
+      .r-#{$count * 5} { bottom: $coficent * $count; }
+      .b-#{$count * 5} { right: $coficent * $count; }
+    }
+    .abs{ position: absolute; }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5} { left: $coficent * $count; }
+      .t-#{$count * 5} { top: $coficent * $count; }
+      .r-#{$count * 5} { right: $coficent * $count; }
+      .b-#{$count * 5} { bottom: $coficent * $count; }
+    }
+    .abs{ position: absolute; }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5} { left: $coficent * $count; }
+      .t-#{$count * 5} { top: $coficent * $count; }
+      .r-#{$count * 5} { right: $coficent * $count; }
+      .b-#{$count * 5} { bottom: $coficent * $count; }
+    }
+    .abs{ position: absolute; }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5} { left: $coficent * $count; }
+      .t-#{$count * 5} { top: $coficent * $count; }
+      .r-#{$count * 5} { right: $coficent * $count; }
+      .b-#{$count * 5} { bottom: $coficent * $count; }
+    }
+    .abs{ position: absolute; }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5} { left: $coficent * $count; }
+      .t-#{$count * 5} { top: $coficent * $count; }
+      .r-#{$count * 5} { right: $coficent * $count; }
+      .b-#{$count * 5} { bottom: $coficent * $count; }
+    }
+    .abs{ position: absolute; }
+  }
+};
+
+// Start Width
+@include positionCreate(5%, 21);
