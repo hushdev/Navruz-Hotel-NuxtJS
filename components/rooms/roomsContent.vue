@@ -1,7 +1,7 @@
 <template>
   <div class="content b-white">
     <div class="container py-6">
-      <h2 class="h1 t-brown">Комнаты</h2>
+      <h1 class="h1 t-brown">Комнаты</h1>
       <div class="row fd-r jc-b mt-5">
         <div v-for="(room, idx) in rooms" :key="idx" class="card shadow">
           <img :src="room.img" class="mb-4" alt="Standart twin" />
