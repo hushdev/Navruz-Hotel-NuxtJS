@@ -11,7 +11,7 @@
   .offer {
     background: url("@/assets/about/bg.jpg") no-repeat center;
     background-size: cover;
-    height: 521px;
+    height: 400px;
     width: 100%;
   }
 }

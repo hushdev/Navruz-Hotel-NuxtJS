@@ -9,7 +9,7 @@
   .offer {
     background: url("@/assets/rooms/bg.jpg") no-repeat center;
     background-size: cover;
-    height: 521px;
+    height: 400px;
     width: 100%;
   }
 }
