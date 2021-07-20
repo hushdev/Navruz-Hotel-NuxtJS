@@ -1,6 +1,7 @@
 <template>
   <button class="text t-white">
-    {{ text }}
+    <nuxt-link v-if="to" :to="to">{{ text }}</nuxt-link>
+    <template v-if="!to">{{ text }}</template>
   </button>
 </template>
 
@@ -11,6 +12,10 @@ export default {
     text: {
       type: String,
       required: true,
+    },
+    to: {
+      type: String,
+      required: false,
     },
   },
 };
@@ -25,12 +30,15 @@ button {
   border-radius: 5px;
   border: 0;
   outline: 0;
-  transition: .2s;
+  transition: 0.2s;
+  a {
+    color: #ffffff;
+  }
   &:hover {
-    background: #FFCF3E;
+    background: #ffcf3e;
   }
   &:focus {
-    background: #E9B10B;
+    background: #e9b10b;
   }
 }
 </style>
