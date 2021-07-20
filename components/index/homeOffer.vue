@@ -2,12 +2,13 @@
   <div class="offer fd-c jc-b pt-6 pb-4">
     <div class="container card fd-c ai-s pt-6">
       <h1 class="h1 t-gray">
-        <span>Отель премиум класса для</span>
+        <span>Уютный отель для</span>
         <br />
         <span class="d-iblock mt-2"> бизнеса и отдыха</span>
+        <br />
+        <span class="d-iblock mt-1 fs-5">Номер один в Ташкенте</span>
       </h1>
-      <p class="h3 t-white fw-b mt-2 mb-3">Номер один в Ташкенте</p>
-      <app-btn text="Забронировать" class="b-brown mt-3" />
+      <app-btn text="Забронировать" class="b-yellow mt-3" />
     </div>
     <div class="container socials mt-10">
       <div class="text t-white mb-3">Мы в соц. сетях</div>
@@ -37,7 +38,6 @@ export default {
   min-height: calc(100vh - 134px);
   background: url("@/assets/index/bg.jpg") center no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   .socials a img {
     transition: 0.2s;
   }

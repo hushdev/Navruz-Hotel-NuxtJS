@@ -286,6 +286,22 @@ $normal: 400;
   }
 }
 
+.h2-decor-brown {
+  font-size: 34px;
+  position: relative;
+  margin-bottom: 70px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 183px;
+    height: 4px;
+    background: #B99470;
+  }
+}
+
 .h3 {
   font-size: 20px;
   line-height: 24.3px;
@@ -293,6 +309,7 @@ $normal: 400;
 
 .h3-decor {
   position: relative;
+
   &:after {
     content: "";
     position: absolute;

@@ -7,6 +7,15 @@
         height="500"
         frameborder="0"
       ></iframe>
+      <!-- WORK ON LATER -->
+      <!-- <div class="card shadow p-3 fd-c ai-t">
+        <h3 class="h3 t-black">Контакты</h3>
+        <ul>
+          <li>1-1А, 2й тупик, улица Шивли, Юнусабадский район</li>
+          <li><a href="tel:+998781501090">(+998) 78 150 10 90</a></li>
+          <li><a href="mailto:info@navruzhotel.uz">info@navruzhotel.uz</a></li>
+        </ul>
+      </div> -->
     </div>
 
     <div class="container">
@@ -22,7 +31,7 @@
             autocomplete="email"
             class="mr-1 px-2 py-1 text-S t-gray fs-2"
           />
-          <app-btn text="Подписаться" class="b-brown"/>
+          <app-btn text="Подписаться" class="b-brown" />
           <!-- <button>Подписаться</button> -->
         </form>
       </div>
@@ -67,27 +76,34 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+  position: relative;
   .map {
     iframe {
       filter: grayscale(100%);
     }
+    // WORK ON LATER
+    // .card {
+    //   width: 277px;
+    // }
   }
-  .news {
-    form {
-      input {
-        min-height: 100%;
-        max-width: 300px;
-        width: 100%;
-        border-radius: 5px;
-        background: #f0f0f0;
-        border: 1px solid #c6c6c6;
+  .container {
+    .news {
+      form {
+        input {
+          min-height: 100%;
+          max-width: 300px;
+          width: 100%;
+          border-radius: 5px;
+          background: #f0f0f0;
+          border: 1px solid #c6c6c6;
+        }
       }
     }
-  }
-  .credentials {
-    div {
-      span a {
-        text-decoration: none;
+    .credentials {
+      div {
+        span a {
+          text-decoration: none;
+        }
       }
     }
   }

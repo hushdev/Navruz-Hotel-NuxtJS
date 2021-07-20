@@ -6,7 +6,7 @@
         <li v-for="(item, idx) in menu" :key="idx">
           <nuxt-link
             :to="item.to"
-            active-class="fw-b t-brown"
+            exact-active-class="fw-b t-brown"
             class="decor-n t-gray fd-r ai-c"
             >{{ item.name }}
             <img v-if="item.sub" class="ml-1" src="@/assets/triangle.svg" />
@@ -20,7 +20,7 @@
           <nuxt-link
             :to="item.to"
             @click="mobile = !mobile"
-            active-class="fw-m t-brown"
+            exact-active-class="fw-b t-brown"
             class="decor-n t-gray fs-6-S"
             >{{ item.name }}</nuxt-link
           >
@@ -155,7 +155,7 @@ export default {
   .nav {
     .menu {
       .mobile-menu {
-         li {
+        li {
           padding: 20px 0;
         }
       }
