@@ -15,7 +15,7 @@
 <script>
 export default {
   methods: {
-    AppLink() {
+    goBack() {
       this.$router.back();
     },
   },

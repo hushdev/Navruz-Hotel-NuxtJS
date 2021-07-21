@@ -6,8 +6,9 @@
         <li v-for="(item, idx) in menu" :key="idx">
           <nuxt-link
             :to="item.to"
-            exact-active-class="fw-b t-brown"
+            active-class="fw-b t-brown"
             class="decor-n t-gray fd-r ai-c"
+            :exact="item.exact"
             >{{ item.name }}
             <img v-if="item.sub" class="ml-1" src="@/assets/triangle.svg" />
           </nuxt-link>
@@ -20,7 +21,7 @@
           <nuxt-link
             :to="item.to"
             @click="mobile = !mobile"
-            exact-active-class="fw-b t-brown"
+            active-class="fw-b t-brown"
             class="decor-n t-gray fs-6-S"
             >{{ item.name }}</nuxt-link
           >
@@ -56,12 +57,12 @@ export default {
       shouldMenuShow: true,
       mobile: false,
       menu: [
-        { name: "Главная", to: "/" },
-        { name: "О нас", to: "/about" },
-        { name: "Комнаты", to: "/rooms", sub: {} },
-        { name: "Удобства", to: "/facilities", sub: {} },
-        { name: "Новости", to: "/news" },
-        { name: "Контакты", to: "/contacts" },
+        { name: "Главная", to: "/", exact: true },
+        { name: "О нас", to: "/about", exact: false },
+        { name: "Комнаты", to: "/rooms", sub: {}, exact: false },
+        { name: "Удобства", to: "/facilities", sub: {}, exact: false },
+        { name: "Новости", to: "/news", exact: false },
+        { name: "Контакты", to: "/contacts", exact: false },
       ],
     };
   },

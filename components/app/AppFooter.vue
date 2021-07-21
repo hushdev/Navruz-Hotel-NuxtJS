@@ -32,7 +32,6 @@
             class="input mr-1 px-2 py-1 text-S t-gray fs-2"
           />
           <app-btn text="Подписаться" class="b-brown" />
-          <!-- <button>Подписаться</button> -->
         </form>
       </div>
       <div class="credentials text-S t-gray fd-r jc-b ta-c mt-1 fd-c-XS">

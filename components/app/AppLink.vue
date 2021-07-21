@@ -1,7 +1,11 @@
 <template>
-  <nuxt-link :to="to" class="app-link h3 t-brown fd-r aic fw-b"
-    >{{text}}
-    <img src="@/assets/brown-arrow.svg" class="ml-1" alt="." />
+  <nuxt-link :to="to" class="app-link h3 t-brown fd-r ai-c fw-b" :class="{ reverse }">
+    <span> {{ text }}</span>
+    <img
+      src="@/assets/brown-arrow.svg"
+      :class="[{ 'ml-1': !reverse }, { 'mr-1': reverse }]"
+      :alt="text"
+    />
   </nuxt-link>
 </template>
 
@@ -14,8 +18,12 @@ export default {
     },
     text: {
       required: true,
-      type: String
-    }
+      type: String,
+    },
+    reverse: {
+      required: false,
+      type: Boolean,
+    },
   },
 };
 </script>
@@ -30,6 +38,18 @@ export default {
     img {
       transform: translateX(20px);
     }
+  }
+}
+.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  &:hover {
+    img {
+      transform: rotate(180deg) translateX(20px);
+    }
+  }
+  img {
+    transform: rotate(180deg);
   }
 }
 </style>

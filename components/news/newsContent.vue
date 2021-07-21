@@ -9,7 +9,7 @@
             <h3 class="h3 t-brown">{{ item.name }}</h3>
             <div class="t-gray text my-1">{{ item.date }}</div>
             <p class="t-gray text mb-4">{{ item.text }}</p>
-            <app-link :to="`/news?${item.id}`" text="Подробнее" />
+            <app-link :to="`news/news-single`" text="Подробнее" />
           </div>
         </div>
       </div>

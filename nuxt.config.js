@@ -41,5 +41,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  mode: "spa",
+
+  loading: {
+    color: '#B99470',
+    height: '5px'
+  },
+  loadingIndicator: {
+    name: 'circle',
+    color: '#B99470',
+    background: 'white'
   }
 }
