@@ -29,7 +29,7 @@
             type="email"
             placeholder="Email"
             autocomplete="email"
-            class="mr-1 px-2 py-1 text-S t-gray fs-2"
+            class="input mr-1 px-2 py-1 text-S t-gray fs-2"
           />
           <app-btn text="Подписаться" class="b-brown" />
           <!-- <button>Подписаться</button> -->
@@ -81,21 +81,12 @@ export default {
     iframe {
       filter: grayscale(100%);
     }
-    // WORK ON LATER
-    // .card {
-    //   width: 277px;
-    // }
   }
   .container {
     .news {
       form {
-        input {
-          min-height: 100%;
+        .input {
           max-width: 300px;
-          width: 100%;
-          border-radius: 5px;
-          background: #f0f0f0;
-          border: 1px solid #c6c6c6;
         }
       }
     }

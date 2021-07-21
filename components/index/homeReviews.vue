@@ -2,9 +2,9 @@
   <div class="reviews pb-3 b-white">
     <div class="container">
       <h2 class="h2 h2-decor t-gray">Отзывы наших гостей</h2>
-      <div class="row">
+      <div class="row w-90 m-c">
         <VueSlickCarousel v-bind="settings">
-          <div v-for="(item, idx) in reviews" :key="idx" class="mx-3 px-6 my-4">
+          <div v-for="(item, idx) in reviews" :key="idx" class="px-6 my-4">
             <div class="wrap b-white card shadow py-4 px-3">
               <div class="fd-r jc-l">
                 <img :src="item.img" :alt="item.text" />
