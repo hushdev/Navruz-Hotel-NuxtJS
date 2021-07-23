@@ -78,6 +78,10 @@
 
 <style lang="scss" scoped>
 .contacts-content {
+  textarea {
+    resize: none;
+    height: 100px;
+  }
   .content {
     .socials {
       li {
@@ -90,6 +94,32 @@
           transition: 0.2s;
           filter: brightness(40%);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .contacts-content {
+    .row {
+      flex-direction: column-reverse;
+      padding-top: 50px;
+      form {
+        max-width: 526px;
+        width: 100%;
+      }
+      .content {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}
+@media (max-width:480px) {
+  .contacts-content {
+    .row {
+      form {
+        padding: 35px 20px 20px 20px;
       }
     }
   }

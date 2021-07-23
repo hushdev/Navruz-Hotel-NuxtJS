@@ -2,10 +2,24 @@
   <div class="content b-white">
     <div class="container py-6">
       <h1 class="h1 t-brown mb-4">Удобства отеля</h1>
-      <div class="row fd-r fw-w jc-c">
+      <!-- <div class="row fd-r fw-w jc-c">
         <div v-for="(item, idx) in items" :key="idx" class="item m-2">
           <img :src="item.img" :alt="item.name" class="card shadow" />
           <span class="fs-6 t-white fw-b">{{ item.name }}</span>
+        </div>
+      </div> -->
+      <div v-for="(item, idx) in items" :key="idx" class="row mt-6">
+        <h2 class="h2">{{ item.name }}</h2>
+        <div class="text-small t-gray my-2 fw-b">{{ item.time }}</div>
+        <p class="text t-gray">{{ item.text }}</p>
+        <div class="carousel fd-r mt-5">
+          <img
+            v-for="(img, idx) in item.images"
+            :key="idx"
+            :alt="item.text"
+            :src="img"
+            class="pb-1"
+          />
         </div>
       </div>
     </div>
@@ -18,48 +32,55 @@ import barImg from "@/assets/index/bar.png";
 import fitnesImg from "@/assets/index/fitnes.png";
 import billiardImg from "@/assets/index/billiard.png";
 
+import pool1 from "@/assets/facilities/pool1.jpg";
+import pool2 from "@/assets/facilities/pool2.jpg";
+import pool3 from "@/assets/facilities/pool3.jpg";
+import pool4 from "@/assets/facilities/pool4.jpg";
+import pool5 from "@/assets/facilities/pool5.jpg";
+
 export default {
   data: () => ({
     items: [
-      { name: "Бассейн", img: poolImg },
-      { name: "Бар", img: barImg },
-      { name: "Фитнес зал", img: fitnesImg },
-      { name: "Бильярд", img: billiardImg },
+      {
+        name: "Бассейн",
+        img: poolImg,
+        time: "Время работы: 9:00 - 18:00",
+        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
+        images: [pool1, pool2, pool3, pool4, pool5],
+      },
+      {
+        name: "Бар",
+        img: barImg,
+        time: "Время работы: 9:00 - 18:00",
+        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
+        images: [pool1, pool2, pool3, pool4, pool5],
+      },
+      {
+        name: "Фитнес зал",
+        img: fitnesImg,
+        time: "Время работы: 9:00 - 18:00",
+        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
+        images: [pool1, pool2, pool3, pool4, pool5],
+      },
+      {
+        name: "Бильярд",
+        img: billiardImg,
+        time: "Время работы: 9:00 - 18:00",
+        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
+        images: [pool1, pool2, pool3, pool4, pool5],
+      },
     ],
   }),
 };
 </script>
 
 <style lang="scss" scoped>
-.content {
-  .item {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    position: relative;
-    cursor: pointer;
-    &:hover {
-      span {
-        transform: translate(-40%, -50%);
-        opacity: 0;
-      }
-      img {
-        filter: brightness(100%);
-      }
-    }
-    img {
-      width: 100%;
-      height: auto;
-      filter: brightness(70%);
-      transition: 0.2s;
-    }
-    span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: 0.2s;
-    }
+.carousel {
+  overflow-x: scroll;
+  img {
+    width: 301px;
+    height: 420px;
+    margin-right: 51px;
   }
 }
 </style>

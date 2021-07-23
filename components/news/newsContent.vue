@@ -2,8 +2,12 @@
   <div class="news-content b-white">
     <div class="container py-6">
       <h1 class="h1 t-brown">Последние новости:</h1>
-      <div class="row fd-c ai-s mt-5">
-        <div v-for="(item, idx) in news" :key="idx" class="card shadow fd-r ai-c w-80 mt-4">
+      <div class="row fd-c ai-s mt-5 fw-w">
+        <div
+          v-for="(item, idx) in news"
+          :key="idx"
+          class="card shadow fd-r ai-c w-80 mt-4"
+        >
           <img :src="item.img" :alt="item.name" />
           <div class="content px-2 py-2">
             <h3 class="h3 t-brown">{{ item.name }}</h3>
@@ -62,9 +66,9 @@ export default {
     .card {
       border-radius: 10px;
       overflow: hidden;
-      transition: .2s;
+      transition: 0.2s;
       &:hover {
-        transform: scale(.99);
+        transform: scale(0.99);
         box-shadow: 0px 5px 10px rgba(97, 97, 97, 0.25);
         img {
           filter: brightness(90%);
@@ -74,11 +78,43 @@ export default {
         margin-top: 0;
       }
       img {
-        transition: .2s;
+        transition: 0.2s;
         max-width: 457px;
         max-height: 300px;
         width: 100%;
         height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1051px) {
+  .news-content {
+    .row {
+      .card {
+        width: 100%;
+        img {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .news-content {
+    .row {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      .card {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 10px ;
+        img {
+          max-width: 100%;
+        }
       }
     }
   }

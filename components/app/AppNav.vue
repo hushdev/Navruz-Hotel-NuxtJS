@@ -10,28 +10,30 @@
             class="decor-n t-gray fd-r ai-c"
             :exact="item.exact"
             >{{ item.name }}
-            <img v-if="item.sub" class="ml-1" src="@/assets/triangle.svg" />
           </nuxt-link>
         </li>
         <li class="fw-b t-black lang">RU</li>
       </ul>
       <!-- TABLET-MOBILE MENU -->
-      <ul v-if="mobile" class="mobile-menu container fd-c jc-b">
-        <li v-for="(item, idx) in menu" :key="idx">
-          <nuxt-link
-            :to="item.to"
-            @click="mobile = !mobile"
-            active-class="fw-b t-brown"
-            class="decor-n t-gray fs-6-S"
-            >{{ item.name }}</nuxt-link
-          >
-        </li>
-        <li class="fw-b t-black lang">RU</li>
-      </ul>
+      <transition name="menu">
+        <ul v-if="mobile" class="mobile-menu container fd-c jc-b">
+          <li v-for="(item, idx) in menu" :key="idx">
+            <nuxt-link
+              :to="item.to"
+              @click.native="mobile = !mobile"
+              active-class="fw-b t-brown"
+              :exact="item.exact"
+              class="decor-n t-gray fs-6-S"
+              >{{ item.name }}</nuxt-link
+            >
+          </li>
+          <li class="fw-b t-black lang">RU</li>
+        </ul>
+      </transition>
     </div>
     <div class="info">
       <div class="container fd-r jc-b ai-c">
-        <nuxt-link to="/"
+        <nuxt-link @click.native="mobile = false" to="/"
           ><img
             src="@/assets/logo.svg"
             alt="Navruz Hotel Tashkent"
@@ -59,8 +61,8 @@ export default {
       menu: [
         { name: "Главная", to: "/", exact: true },
         { name: "О нас", to: "/about", exact: false },
-        { name: "Комнаты", to: "/rooms", sub: {}, exact: false },
-        { name: "Удобства", to: "/facilities", sub: {}, exact: false },
+        { name: "Комнаты", to: "/rooms", exact: false },
+        { name: "Удобства", to: "/facilities", exact: false },
         { name: "Новости", to: "/news", exact: false },
         { name: "Контакты", to: "/contacts", exact: false },
       ],
@@ -99,6 +101,7 @@ export default {
       display: flex;
       align-items: center;
       border-bottom: 0;
+      position: relative;
       .desktop-menu {
         display: none;
       }
@@ -156,6 +159,9 @@ export default {
   .nav {
     .menu {
       .mobile-menu {
+        height: 100vh;
+        top: 0;
+        padding-top: 73px;
         li {
           padding: 20px 0;
         }
@@ -163,6 +169,8 @@ export default {
     }
     .info {
       border-radius: 10px;
+      margin: 5px;
+      width: calc(100% - 10px);
       box-shadow: 0px 5px 29px rgba(97, 97, 97, 0.25);
       overflow: hidden;
     }

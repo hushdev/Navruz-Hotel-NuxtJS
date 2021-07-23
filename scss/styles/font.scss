@@ -257,10 +257,10 @@ $normal: 400;
 
 .h1 {
   font-size: 41px;
-
   span {
     background: #ffffff;
     padding: 5px 15px;
+    margin-bottom: 10px;
   }
 }
 
@@ -333,4 +333,19 @@ $normal: 400;
 
 .decor-n {
   text-decoration: none;
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    span {
+      background: transparent !important;
+      color: #ffffff !important;
+      padding: 0 !important;
+      
+      &:nth-child(5) {
+        font-size: 20px;
+      }
+    }
+  }
 }

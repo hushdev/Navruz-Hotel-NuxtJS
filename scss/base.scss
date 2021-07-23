@@ -13,7 +13,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  // background: rgb(204, 204, 204);
+}
+
+body, html {
+  overflow-x: hidden !important;
 }
 
 *,
@@ -81,3 +84,4 @@ div {
 @import './styles/flex.scss';
 @import './styles/size.scss';
 @import './styles/position.scss';
+@import './styles/scrollbar.scss';

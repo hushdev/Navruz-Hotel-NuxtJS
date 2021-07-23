@@ -28,7 +28,7 @@
       </p>
 
       <h2 class="h1 t-brown mt-6 mb-4">Почему выбирают нас?</h2>
-      <div class="fd-r jc-c">
+      <div class="fd-r jc-c fd-c-XS">
         <ul>
           <li class="text m-2 fw-b t-brown">
             <span class="t-black">Доступные цены</span>
@@ -46,7 +46,7 @@
             <span class="t-black">Номера для некурящих </span>
           </li>
         </ul>
-        <ul class="ml-3">
+        <ul class="ml-3 ml-0-XS">
           <li class="text m-2 fw-b t-brown">
             <span class="t-black">Бесплатный Wi-Fi </span>
           </li>

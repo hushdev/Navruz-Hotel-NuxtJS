@@ -12,13 +12,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 .page-enter,
 .page-leave-to {
+  opacity: 0;
+  transform: translate3d(0, 15px, 0);
+}
+
+
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity .15s ease-in-out, transform 0.25s ease-in-out;
+}
+.menu-enter,
+.menu-leave-to {
   opacity: 0;
   transform: translate3d(0, 15px, 0);
 }

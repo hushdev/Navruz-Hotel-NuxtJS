@@ -2,11 +2,11 @@
   <div class="rooms py-3 b-white">
     <div class="container">
       <h2 class="h2-decor">Комнаты</h2>
-      <div class="row fd-r jc-b">
-        <div v-for="(room, idx) in rooms" :key="idx" class="card shadow pb-5">
+      <div class="row fd-r fw-w jc-c">
+        <nuxt-link to="/rooms" v-for="(room, idx) in rooms" :key="idx" class="card shadow pb-5 m-1">
           <img :src="room.img" class="mb-4" alt="Standart twin" />
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
-        </div>
+        </nuxt-link>
       </div>
       <div class="ta-c h3 t-brown mt-6">BOOKING ENGINE HERE</div>
     </div>

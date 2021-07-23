@@ -2,11 +2,11 @@
   <div class="news b-white pb-3">
     <div class="container">
       <h2 class="h2 h2-decor t-gray">Последние новости</h2>
-      <div class="row fd-r jc-b ai-s">
+      <div class="row fd-r jc-c ai-s fw-w">
         <div
           v-for="(item, idx) in news"
           :key="idx"
-          class="card shadow mx-4 w-33"
+          class="card shadow mx-0-XS m-1"
         >
           <img :src="item.img" :alt="item.name" />
           <div class="content py-4 px-3">
@@ -55,7 +55,7 @@ export default {
   .row {
     .card {
       overflow: hidden;
-      max-width: 364px;
+      max-width: 350px;
       width: 100%;
       img {
         transition: 0.2s;

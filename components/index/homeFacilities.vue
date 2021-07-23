@@ -3,10 +3,15 @@
     <div class="container">
       <h2 class="h2-decor t-gray">Наши удобства</h2>
       <div class="row fd-r fw-w jc-c">
-        <div v-for="(item, idx) in items" :key="idx" class="item m-2">
+        <nuxt-link
+          to="/facilities"
+          v-for="(item, idx) in items"
+          :key="idx"
+          class="item m-2"
+        >
           <img :src="item.img" :alt="item.name" class="card shadow" />
           <span class="fs-6 t-white fw-b">{{ item.name }}</span>
-        </div>
+        </nuxt-link>
       </div>
       <app-btn text="Ещё" class="b-yellow m-c mt-3" />
     </div>
@@ -58,6 +63,7 @@ export default {
       position: absolute;
       top: 50%;
       left: 50%;
+      text-align: center;
       transform: translate(-50%, -50%);
       transition: 0.2s;
     }
