@@ -9,8 +9,8 @@
           class="card shadow fd-r ai-c w-80 mt-4"
         >
           <img :src="item.img" :alt="item.name" />
-          <div class="content px-2 py-2">
-            <h3 class="h3 t-brown">{{ item.name }}</h3>
+          <div class="content px-2 py-2 py-4-XS">
+            <h3 class="h3 t-gray">{{ item.name }}</h3>
             <div class="t-gray text my-1">{{ item.date }}</div>
             <p class="t-gray text mb-4">{{ item.text }}</p>
             <app-link :to="`news/news-single`" text="Подробнее" />
@@ -111,10 +111,19 @@ export default {
       .card {
         flex-direction: column;
         max-width: 300px;
-        margin: 10px ;
-        img {
+        margin: 10px;
+ py-4-XS        img {
           max-width: 100%;
         }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .news-content {
+    .row {
+      .card {
+        max-width: 100%;
       }
     }
   }

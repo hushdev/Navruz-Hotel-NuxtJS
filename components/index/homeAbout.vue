@@ -27,7 +27,7 @@
           <app-link to="/about" text="Узнать больше" />
         </div>
       </div>
-      <div class="card shadow panel py-3 px-2 fd-r jc-c mt-6 fw-w">
+      <div class="card shadow panel py-3 px-2 fd-r jc-c mt-6 mx-1-XS fw-w">
         <div class="item fd-r ai-c m-2">
           <img src="@/assets/index/medal.svg" alt="Доступные цены на номера" />
           <span class="t-brown text fw-b ml-2">Доступные цены на номера</span>

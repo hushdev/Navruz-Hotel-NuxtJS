@@ -4,7 +4,7 @@
       <h2 class="h2-decor t-gray">Наши удобства</h2>
       <div class="row fd-r fw-w jc-c">
         <nuxt-link
-          to="/facilities"
+          :to="`/facilities${item.anchor}`"
           v-for="(item, idx) in items"
           :key="idx"
           class="item m-2"
@@ -27,10 +27,10 @@ import billiardImg from "@/assets/index/billiard.png";
 export default {
   data: () => ({
     items: [
-      { name: "Бассейн", img: poolImg },
-      { name: "Бар", img: barImg },
-      { name: "Фитнес зал", img: fitnesImg },
-      { name: "Бильярд", img: billiardImg },
+      { name: "Бассейн", img: poolImg, anchor: "#pool" },
+      { name: "Бар", img: barImg, anchor: "#bar" },
+      { name: "Фитнес зал", img: fitnesImg, anchor: "#fitness" },
+      { name: "Бильярд", img: billiardImg, anchor: "#billiard" },
     ],
   }),
 };
@@ -67,6 +67,12 @@ export default {
       transform: translate(-50%, -50%);
       transition: 0.2s;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    margin: 1rem 0;
   }
 }
 </style>

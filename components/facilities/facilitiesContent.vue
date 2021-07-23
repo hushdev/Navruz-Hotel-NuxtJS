@@ -2,13 +2,7 @@
   <div class="content b-white">
     <div class="container py-6">
       <h1 class="h1 t-brown mb-4">Удобства отеля</h1>
-      <!-- <div class="row fd-r fw-w jc-c">
-        <div v-for="(item, idx) in items" :key="idx" class="item m-2">
-          <img :src="item.img" :alt="item.name" class="card shadow" />
-          <span class="fs-6 t-white fw-b">{{ item.name }}</span>
-        </div>
-      </div> -->
-      <div v-for="(item, idx) in items" :key="idx" class="row mt-6">
+      <div v-for="(item, idx) in items" :key="idx" class="row pt-6" :id="item.id">
         <h2 class="h2">{{ item.name }}</h2>
         <div class="text-small t-gray my-2 fw-b">{{ item.time }}</div>
         <p class="text t-gray">{{ item.text }}</p>
@@ -47,6 +41,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
+        id: "pool"
       },
       {
         name: "Бар",
@@ -54,6 +49,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
+        id: "bar"
       },
       {
         name: "Фитнес зал",
@@ -61,6 +57,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
+        id: 'fitness'
       },
       {
         name: "Бильярд",
@@ -68,6 +65,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
+        id: 'billiard'
       },
     ],
   }),
@@ -80,7 +78,13 @@ export default {
   img {
     width: 301px;
     height: 420px;
-    margin-right: 51px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 834px) {
+  .carousel img {
+    margin-right: 10px;
   }
 }
 </style>

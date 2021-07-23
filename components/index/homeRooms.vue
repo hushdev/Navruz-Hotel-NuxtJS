@@ -3,7 +3,12 @@
     <div class="container">
       <h2 class="h2-decor">Комнаты</h2>
       <div class="row fd-r fw-w jc-c">
-        <nuxt-link to="/rooms" v-for="(room, idx) in rooms" :key="idx" class="card shadow pb-5 m-1">
+        <nuxt-link
+          :to="`/rooms${room.anchor}`"
+          v-for="(room, idx) in rooms"
+          :key="idx"
+          class="card shadow pb-5 m-1"
+        >
           <img :src="room.img" class="mb-4" alt="Standart twin" />
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
         </nuxt-link>
@@ -22,10 +27,10 @@ import room4 from "@/assets/index/econom-room.png";
 export default {
   data: () => ({
     rooms: [
-      { name: "Standart Twin", img: room1 },
-      { name: "Standart King", img: room2 },
-      { name: "Suite", img: room3 },
-      { name: "Econom Standart", img: room4 },
+      { name: "Standart Twin", img: room1, anchor: '#twin' },
+      { name: "Standart King", img: room2, anchor: '#king' },
+      { name: "Suite", img: room3, anchor: '#suite' },
+      { name: "Econom Standart", img: room4, anchor: '#econom' },
     ],
   }),
 };
@@ -40,7 +45,7 @@ export default {
     height: auto;
   }
   h3:after {
-    transition: .3s;
+    transition: 0.3s;
   }
   &:hover {
     h3:after {
@@ -51,6 +56,12 @@ export default {
       transform: scale(1.1);
       filter: brightness(70%);
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="rooms-offer">
-    <div class="offer fd-r ai-c jc-c">
+    <div class="offer fd-r ai-c jc-c pt-6">
     </div>
   </div>
 </template>
