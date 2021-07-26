@@ -257,6 +257,7 @@ $normal: 400;
 
 .h1 {
   font-size: 41px;
+
   span {
     background: #ffffff;
     padding: 5px 15px;
@@ -336,16 +337,66 @@ $normal: 400;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 834px) {
+  .h1 {
+    font-size: 35px !important;
+  }
   h1 {
+    font-size: 35px !important;
+  }
+
+  .h2,
+  .h2-decor,
+  .h2-decor-brown {
+    font-size: 25px !important;
+  }
+
+  .h3,
+  .h3-decor,
+  .h3-decor-brown {
+    font-size: 16px !important;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .text-S {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 28px !important;
+  }
+  h1 {
+    font-size: 28px !important;
+
     span {
       background: transparent !important;
       color: #ffffff !important;
       padding: 0 !important;
-      
-      &:nth-child(5) {
-        font-size: 20px;
-      }
     }
+  }
+
+  .h2,
+  .h2-decor,
+  .h2-decor-brown {
+    font-size: 22px !important;
+  }
+
+  .h3,
+  .h3-decor,
+  .h3-decor-brown {
+    font-size: 18px !important;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .text-S {
+    font-size: 14px;
   }
 }

@@ -2,33 +2,36 @@
   <div class="reviews pb-3 b-white">
     <div class="container">
       <h2 class="h2 h2-decor t-gray">Отзывы наших гостей</h2>
-      <div class="row w-90 w-100-XS m-c">
-        <client-only>
-          <VueSlickCarousel v-bind="settings">
-            <div
-              v-for="(item, idx) in reviews"
-              :key="idx"
-              class="px-6 my-4 px-3-XS"
-            >
-              <div class="wrap b-white card shadow py-4 px-3">
-                <div class="fd-r jc-l">
-                  <img :src="item.img" :alt="item.text" />
-                  <div class="title fd-c ml-1">
-                    <span class="t-black text fw-b">{{ item.name }}</span>
-                    <img
-                      class="review-img"
-                      src="@/assets/index/stars.svg"
-                      alt="5 stars!"
-                    />
-                  </div>
-                </div>
-                <p class="text t-gray mt-3">{{ item.text }}</p>
+      <div class="row w-90 w-100-XS m-c"></div>
+    </div>
+    <client-only>
+      <VueSlickCarousel
+        v-bind="settings"
+        class="w-100 m-c"
+        style="max-width: 1280px"
+      >
+        <div
+          v-for="(item, idx) in reviews"
+          :key="idx"
+          class="px-6 my-4 px-1-XS"
+        >
+          <div class="wrap b-white card shadow py-4 px-3">
+            <div class="fd-r jc-l">
+              <img :src="item.img" :alt="item.text" />
+              <div class="title fd-c ml-1">
+                <span class="t-black text fw-b">{{ item.name }}</span>
+                <img
+                  class="review-img"
+                  src="@/assets/index/stars.svg"
+                  alt="5 stars!"
+                />
               </div>
             </div>
-          </VueSlickCarousel>
-        </client-only>
-      </div>
-    </div>
+            <p class="text t-gray mt-3">{{ item.text }}</p>
+          </div>
+        </div>
+      </VueSlickCarousel>
+    </client-only>
   </div>
 </template>
 
@@ -107,11 +110,18 @@ export default {
   }
   .slick-arrow {
     width: 50px;
+    z-index: 1 !important;
   }
   .slick-prev:before,
   .slick-next:before {
     color: #b99470 !important;
     font-size: 30px;
+  }
+  .slick-prev {
+    transform: translateX(25px);
+  }
+  .slick-next {
+    transform: translateX(-25px);
   }
   .card {
     display: block;

@@ -10,7 +10,7 @@
           class="item m-2"
         >
           <img :src="item.img" :alt="item.name" class="card shadow" />
-          <span class="fs-6 t-white fw-b">{{ item.name }}</span>
+          <span class="fs-6 t-white fw-b h2 t-white">{{ item.name }}</span>
         </nuxt-link>
       </div>
       <app-btn text="Ещё" class="b-yellow m-c mt-3" />

@@ -145,6 +145,8 @@ export default {
 @media (max-width: 834px) {
   .carousel img {
     margin-right: 10px;
+    width: 151px;
+    height: 270px;
   }
 }
 @media (max-width: 480px) {
