@@ -28,7 +28,7 @@
       </p>
 
       <h2 class="h1 t-brown mt-6 mb-4">Почему выбирают нас?</h2>
-      <div class="fd-r jc-c fd-c-XS">
+      <div class="fd-r jc-c fd-c-XS mb-6">
         <ul>
           <li class="text m-2 fw-b t-brown">
             <span class="t-black">Доступные цены</span>
@@ -64,9 +64,18 @@
           </li>
         </ul>
       </div>
+      <search-form />
     </div>
   </div>
 </template>
+
+<script>
+import SearchForm from '@/components/travelline/searchForm.vue'
+
+export default {
+  components: {SearchForm}
+}
+</script>
 
 <style lang="scss" scoped>
 .content {

@@ -3,19 +3,11 @@
     <div class="map">
       <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A12d7b74f622bf778838e54df31a9fe3829e6da5b592a29d1590bcf4505e53e66&amp;source=constructor"
+        loading="lazy"
         width="100%"
-        height="500"
+        height="400"
         frameborder="0"
       ></iframe>
-      <!-- WORK ON LATER -->
-      <!-- <div class="card shadow p-3 fd-c ai-t">
-        <h3 class="h3 t-black">Контакты</h3>
-        <ul>
-          <li>1-1А, 2й тупик, улица Шивли, Юнусабадский район</li>
-          <li><a href="tel:+998781501090">(+998) 78 150 10 90</a></li>
-          <li><a href="mailto:info@navruzhotel.uz">info@navruzhotel.uz</a></li>
-        </ul>
-      </div> -->
     </div>
 
     <div class="container">
@@ -78,7 +70,6 @@ export default {
   position: relative;
   .map {
     iframe {
-      filter: grayscale(100%);
     }
   }
   .container {

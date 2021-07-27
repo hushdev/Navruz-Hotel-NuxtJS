@@ -4,33 +4,58 @@
       <h2 class="h2-decor">Комнаты</h2>
       <div class="row fd-r fw-w jc-c">
         <nuxt-link
-          :to="`/rooms${room.anchor}`"
           v-for="(room, idx) in rooms"
           :key="idx"
+          :to="room.link"
           class="card shadow pb-5 m-1"
         >
           <img :src="room.img" class="mb-4" alt="Standart twin" />
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
         </nuxt-link>
       </div>
-      <div class="ta-c h3 t-brown mt-6">BOOKING ENGINE HERE</div>
+      <div class="ta-c h3 t-brown mt-6">
+        <search-form />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import SearchForm from "@/components/travelline/searchForm.vue";
+
 import room1 from "@/assets/index/twin-room.png";
 import room2 from "@/assets/index/king-room.png";
 import room3 from "@/assets/index/suite-room.png";
 import room4 from "@/assets/index/econom-room.png";
 
 export default {
+  components: { SearchForm },
   data: () => ({
     rooms: [
-      { name: "Standart Twin", img: room1, anchor: '#twin' },
-      { name: "Standart King", img: room2, anchor: '#king' },
-      { name: "Suite", img: room3, anchor: '#suite' },
-      { name: "Econom Standart", img: room4, anchor: '#econom' },
+      {
+        name: "Standart Twin",
+        img: room1,
+        anchor: "#twin",
+        link: "/booking?room-type=139604",
+      },
+      {
+        name: "Standart King",
+        img: room2,
+        anchor: "#king",
+        link: "/booking?room-type=139605",
+      },
+      {
+        name: "Suite",
+        img: room3,
+        anchor: "#suite",
+        link: "/booking?room-type=139607",
+      },
+      {
+        name: "Econom Standart",
+        img: room4,
+        anchor: "#econom",
+        link: "/booking?room-type=139606",
+      },
     ],
   }),
 };

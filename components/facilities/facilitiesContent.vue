@@ -2,7 +2,12 @@
   <div class="content b-white">
     <div class="container py-6">
       <h1 class="h1 t-brown mb-4">Удобства отеля</h1>
-      <div v-for="(item, idx) in items" :key="idx" class="row pt-6" :id="item.id">
+      <div
+        v-for="(item, idx) in items"
+        :key="idx"
+        class="row pt-6"
+        :id="item.id"
+      >
         <h2 class="h2">{{ item.name }}</h2>
         <div class="text-small t-gray my-2 fw-b">{{ item.time }}</div>
         <p class="text t-gray">{{ item.text }}</p>
@@ -16,11 +21,14 @@
           />
         </div>
       </div>
+      <search-form class="mt-6" />
     </div>
   </div>
 </template>
 
 <script>
+import SearchForm from "@/components/travelline/searchForm";
+
 import poolImg from "@/assets/index/pool.png";
 import barImg from "@/assets/index/bar.png";
 import fitnesImg from "@/assets/index/fitnes.png";
@@ -33,6 +41,7 @@ import pool4 from "@/assets/facilities/pool4.jpg";
 import pool5 from "@/assets/facilities/pool5.jpg";
 
 export default {
+  components: { SearchForm },
   data: () => ({
     items: [
       {
@@ -41,7 +50,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
-        id: "pool"
+        id: "pool",
       },
       {
         name: "Бар",
@@ -49,7 +58,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
-        id: "bar"
+        id: "bar",
       },
       {
         name: "Фитнес зал",
@@ -57,7 +66,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
-        id: 'fitness'
+        id: "fitness",
       },
       {
         name: "Бильярд",
@@ -65,7 +74,7 @@ export default {
         time: "Время работы: 9:00 - 18:00",
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [pool1, pool2, pool3, pool4, pool5],
-        id: 'billiard'
+        id: "billiard",
       },
     ],
   }),

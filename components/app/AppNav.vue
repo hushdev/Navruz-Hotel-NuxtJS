@@ -60,6 +60,7 @@ export default {
       mobile: false,
       menu: [
         { name: "Главная", to: "/", exact: true },
+        { name: "Бронирование", to: "/booking", exact: false },
         { name: "О нас", to: "/about", exact: false },
         { name: "Комнаты", to: "/rooms", exact: false },
         { name: "Удобства", to: "/facilities", exact: false },
@@ -90,11 +91,9 @@ export default {
     }
   }
 }
-
 @media screen and (max-width: 834px) {
   .nav {
     position: relative;
-
     .menu {
       z-index: 20;
       padding: 0;
@@ -117,7 +116,7 @@ export default {
         width: 100vw;
         background: #ffffff;
         li {
-          padding: 30px 0;
+          padding: 20px 0;
           width: 100%;
           text-align: center;
           border-bottom: 1px solid #dedede;
@@ -154,7 +153,6 @@ export default {
     }
   }
 }
-
 @media screen and (max-width: 480px) {
   .nav {
     .menu {

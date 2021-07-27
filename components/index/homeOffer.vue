@@ -8,7 +8,7 @@
         <br />
         <span class="d-iblock">Номер один в Ташкенте</span>
       </h1>
-      <app-btn text="Забронировать" class="b-yellow mt-3" />
+      <app-btn text="Забронировать" to="/booking" class="b-yellow mt-3" />
     </div>
     <div class="container socials mt-6 pt-6">
       <div class="text t-white mb-3">Мы в соц. сетях</div>

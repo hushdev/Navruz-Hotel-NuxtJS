@@ -17,14 +17,17 @@
           </div>
         </div>
       </div>
+      <search-form class="travel-search mt-6" />
     </div>
   </div>
 </template>
 
 <script>
+import SearchForm from "@/components/travelline/searchForm";
 import newExample from "@/assets/news/newExample.jpg";
 
 export default {
+  components: { SearchForm },
   data: () => ({
     news: [
       {
@@ -112,7 +115,7 @@ export default {
         flex-direction: column;
         max-width: 300px;
         margin: 10px;
- py-4-XS        img {
+        py-4-XS img {
           max-width: 100%;
         }
       }

@@ -17,7 +17,7 @@
             </li>
           </ul>
           <nuxt-link
-            to="/"
+            :to="room.link"
             class="t-white fw-b text b-brown w-100 d-iblock mt-3 ta-c py-1"
             >Забронировать</nuxt-link
           >
@@ -41,13 +41,17 @@
               class="pb-1"
             />
           </div>
+          <app-btn text="Забронировать" :to="room.link" class="b-brown mt-2" />
         </div>
       </div>
+      <search-form class="mt-6" />
     </div>
   </div>
 </template>
 
 <script>
+import SearchForm from "@/components/travelline/searchForm";
+
 import room1 from "@/assets/index/twin-room.png";
 import room2 from "@/assets/index/king-room.png";
 import room3 from "@/assets/index/suite-room.png";
@@ -59,8 +63,10 @@ import king2 from "@/assets/rooms/king2.jpg";
 import king3 from "@/assets/rooms/king3.jpg";
 import king4 from "@/assets/rooms/king4.jpg";
 import king5 from "@/assets/rooms/king5.jpg";
+import AppBtn from "../app/AppBtn.vue";
 
 export default {
+  components: { SearchForm },
   data: () => ({
     checkIcon,
     rooms: [
@@ -71,6 +77,7 @@ export default {
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [king1, king2, king3, king4, king5],
         id: "twin",
+        link: "/booking?room-type=139604",
       },
       {
         name: "Standart King",
@@ -79,6 +86,7 @@ export default {
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [king1, king2, king3, king4, king5],
         id: "king",
+        link: "/booking?room-type=139605",
       },
       {
         name: "Suite",
@@ -87,6 +95,7 @@ export default {
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [king1, king2, king3, king4, king5],
         id: "suite",
+        link: "/booking?room-type=139607",
       },
       {
         name: "Econom Standart",
@@ -95,6 +104,7 @@ export default {
         text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
         images: [king1, king2, king3, king4, king5],
         id: "econom",
+        link: "/booking?room-type=139606",
       },
     ],
   }),

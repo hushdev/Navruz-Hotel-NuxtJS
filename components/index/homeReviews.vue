@@ -1,8 +1,7 @@
 <template>
-  <div class="reviews pb-3 b-white">
+  <div class="reviews pb-6 b-white">
     <div class="container">
       <h2 class="h2 h2-decor t-gray">Отзывы наших гостей</h2>
-      <div class="row w-90 w-100-XS m-c"></div>
     </div>
     <client-only>
       <VueSlickCarousel
@@ -13,7 +12,7 @@
         <div
           v-for="(item, idx) in reviews"
           :key="idx"
-          class="px-6 my-4 px-1-XS"
+          class="px-6 mb-4 mt-3 px-1-XS"
         >
           <div class="wrap b-white card shadow py-4 px-3">
             <div class="fd-r jc-l">
@@ -104,6 +103,9 @@ export default {
 .reviews {
   * {
     outline: 0;
+  }
+  h2 {
+    margin-bottom: 3rem;
   }
   .review-img {
     max-width: 100px;

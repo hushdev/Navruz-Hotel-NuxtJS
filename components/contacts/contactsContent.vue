@@ -1,9 +1,8 @@
 <template>
   <div class="contacts-content b-white">
     <div class="container py-6">
-      <h1 class="h1 t-brown">Контакты</h1>
       <div class="row fd-r ai-c">
-        <form class="w-35 fd-c mt-5 card shadow pt-3 pb-5 px-5">
+        <form class="w-35 fd-c card shadow pt-3 pb-5 px-5">
           <h2 class="h3 h3-decor t-gray">Отправить сообщение</h2>
           <p class="t-gray text mt-3 mb-3">
             У вас есть что-нибудь в уме, чтобы рассказать нам? Пожалуйста, не
@@ -71,9 +70,19 @@
           </ul>
         </div>
       </div>
+      <search-form class="mt-6" />
     </div>
   </div>
 </template>
+
+<script>
+import SearchForm from "@/components/travelline/searchForm.vue";
+
+export default {
+  components: { SearchForm },
+};
+</script>
+
 
 
 <style lang="scss" scoped>
@@ -107,6 +116,7 @@
       form {
         max-width: 526px;
         width: 100%;
+        margin-top: 3rem;
       }
       .content {
         width: 100%;
@@ -115,7 +125,7 @@
     }
   }
 }
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .contacts-content {
     .row {
       form {

@@ -79,7 +79,7 @@
     .mx-#{$count} { margin-left: $size * ($coficent * $count); margin-right: $size * ($coficent * $count); }
     .my-#{$count} { margin-top: $size * ($coficent * $count); margin-bottom: $size * ($coficent * $count); }
     .ml-#{$count} { margin-left: $size * ($coficent * $count); }
-    .mt-#{$count} { margin-top: $size * ($coficent * $count); }
+    .mt-#{$count} { margin-top: $size * ($coficent * $count) !important; }
     .mr-#{$count} { margin-right: $size * ($coficent * $count); }
     .mb-#{$count} { margin-bottom: $size * ($coficent * $count); }
   }
