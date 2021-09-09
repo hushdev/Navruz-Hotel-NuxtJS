@@ -6,7 +6,7 @@
     <div class="content b-white">
       <div class="container py-6">
         <h1 class="h1 t-brown mb-6">{{$t('booking.title')}}</h1>
-        <booking-form/>
+        <booking-form :locale="$i18n.locale"/>
       </div>
     </div>
   </div>

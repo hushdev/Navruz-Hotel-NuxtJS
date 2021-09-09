@@ -39,7 +39,7 @@
           <app-btn :text="$t('rooms.button')" :to="item.link" class="b-brown mt-2" />
         </div>
       </div>
-      <search-form class="mt-6" />
+      <search-form :locale="$i18n.locale" class="mt-6" />
     </div>
   </div>
 </template>

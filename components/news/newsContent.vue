@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <search-form class="travel-search mt-6" />
+      <search-form :locale="$i18n.locale" class="travel-search mt-6" />
     </div>
   </div>
 </template>

@@ -16,6 +16,15 @@ export default {
 </script>
 
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;

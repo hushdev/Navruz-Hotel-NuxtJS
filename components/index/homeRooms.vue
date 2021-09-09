@@ -14,7 +14,7 @@
         </nuxt-link>
       </div>
       <div class="ta-c h3 t-brown mt-6">
-        <search-form />
+        <search-form :locale="$i18n.locale"/>
       </div>
     </div>
   </div>

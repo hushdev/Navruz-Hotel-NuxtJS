@@ -1,7 +1,7 @@
 <template>
   <div class="offer fd-c pt-6 pb-4">
     <div class="container card fd-c ai-s pt-6">
-      <h1 class="h1 t-gray">
+      <h1 class="h1 h1-offer t-gray">
         <span class="d-iblock">{{$t('home.offer.title[0]')}}</span>
         <br />
         <span class="d-iblock">{{$t('home.offer.title[1]')}}</span>

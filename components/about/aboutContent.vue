@@ -17,7 +17,7 @@
           </li>
         </ul>
       </div>
-      <search-form />
+      <search-form :locale="$i18n.locale" />
     </div>
   </div>
 </template>
