@@ -3,47 +3,45 @@
     <div class="container py-6">
       <div class="row fd-r ai-c">
         <form class="w-35 fd-c card shadow pt-3 pb-5 px-5">
-          <h2 class="h3 h3-decor t-gray">Отправить сообщение</h2>
+          <h2 class="h3 h3-decor t-gray">{{$t('contacts.form.title')}}</h2>
           <p class="t-gray text mt-3 mb-3">
-            У вас есть что-нибудь в уме, чтобы рассказать нам? Пожалуйста, не
-            стесняйтесь обращаться к нам через нашу контактную форму.
+            {{$t('contacts.form.sub')}}
           </p>
           <input
             class="input px-2 py-1 mb-3 t-gray"
             type="text"
-            placeholder="Ваше имя"
+            :placeholder="$t('contacts.form.name')"
           />
           <input
             class="input px-2 py-1 mb-3 t-gray"
             type="email"
             autocomplete="email"
-            placeholder="Ваше E-Mail"
+            :placeholder="$t('contacts.form.email')"
           />
           <input
             class="input px-2 py-1 mb-3 t-gray"
             type="phone"
             autocomplete="phone"
-            placeholder="Номер телефона"
+            :placeholder="$t('contacts.form.phone')"
           />
           <textarea
             class="input px-2 py-1 mb-3 t-gray"
-            placeholder="Сообщение"
+            :placeholder="$t('contacts.form.message')"
           ></textarea>
           <app-btn
             type="submit"
-            text="Отправить"
+            :text="$t('contacts.form.button')"
             class="b-brown"
             style="width: 100%"
           />
         </form>
         <div class="content w-50 ml-6">
-          <h2 class="h2 h2-decor-brown">Контактные данные</h2>
+          <h2 class="h2 h2-decor-brown">{{$t('contacts.title')}}</h2>
           <p class="text t-black mb-3">
-            100000, 1-1А, 2й тупик, улица Шивли, Юнусабадский район, Ташкент,
-            Узбекистан.
+            {{$t('contacts.adress')}}
           </p>
           <p class="text t-black mb-3">
-            Тел.:
+            {{$t('contacts.phone')}}
             <a href="tel:+998781501090" class="t-brown">(+998) 78 150 10 90</a>
           </p>
           <p class="text t-black">
@@ -53,17 +51,17 @@
           </p>
           <ul class="socials fd-r ai-c mt-3">
             <li>
-              <a href="https://www.instagram.com/navruzhotel/">
+              <a href="https://www.instagram.com/navruzhotel/" target="_blank">
                 <img src="@/assets/index/instagram.svg" alt="Instagram" />
               </a>
             </li>
             <li class="mx-2">
-              <a href="https://www.facebook.com/hotelnavruz/" class="mx-1">
+              <a href="https://www.facebook.com/hotelnavruz/" class="mx-1" target="_blank">
                 <img src="@/assets/index/facebook.svg" alt="Facebook" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://t.me/navruzhotel" target="_blank">
                 <img src="@/assets/index/telegram.svg" alt="Telegram" />
               </a>
             </li>

@@ -1,29 +1,17 @@
 <template>
   <div class="reviews pb-6 b-white">
     <div class="container">
-      <h2 class="h2 h2-decor t-gray">Отзывы наших гостей</h2>
+      <h2 class="h2 h2-decor t-gray">{{$t('home.reviews.title')}}</h2>
     </div>
     <client-only>
-      <VueSlickCarousel
-        v-bind="settings"
-        class="w-100 m-c"
-        style="max-width: 1280px"
-      >
-        <div
-          v-for="(item, idx) in reviews"
-          :key="idx"
-          class="px-6 mb-4 mt-3 px-1-XS"
-        >
+      <VueSlickCarousel v-bind="settings" class="w-100 m-c" style="max-width: 1280px">
+        <div v-for="(item, idx) in reviews" :key="idx" class="px-6 mb-4 mt-3 px-1-XS">
           <div class="wrap b-white card shadow py-4 px-3">
             <div class="fd-r jc-l">
-              <img :src="item.img" :alt="item.text" />
+              <img :src="require(`@/assets/index/${item.img}`)" class="review-avatar" :alt="item.text" />
               <div class="title fd-c ml-1">
                 <span class="t-black text fw-b">{{ item.name }}</span>
-                <img
-                  class="review-img"
-                  src="@/assets/index/stars.svg"
-                  alt="5 stars!"
-                />
+                <img class="review-img" src="@/assets/index/stars.svg" alt="5 stars!" />
               </div>
             </div>
             <p class="text t-gray mt-3">{{ item.text }}</p>
@@ -45,6 +33,11 @@ import Review2 from "@/assets/index/review-2.png";
 
 export default {
   components: { VueSlickCarousel },
+  computed: {
+    reviews() {
+      return this.$t('home.reviews.items')
+    },
+  },
   data: () => ({
     settings: {
       centerMode: true,
@@ -63,7 +56,7 @@ export default {
         },
       ],
     },
-    reviews: [
+    reviews1: [
       {
         name: "Ольга Россия",
         text: "Все полностью соответствует фотографиям на сайте. Очень чисто, все новое. Персонал очень приветливый. ",
@@ -107,8 +100,14 @@ export default {
   h2 {
     margin-bottom: 3rem;
   }
+  .review-avatar {
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+  }
   .review-img {
     max-width: 100px;
+    
   }
   .slick-arrow {
     width: 50px;

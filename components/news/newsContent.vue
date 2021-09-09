@@ -1,7 +1,7 @@
 <template>
   <div class="news-content b-white">
     <div class="container py-6">
-      <h1 class="h1 t-brown">Последние новости:</h1>
+      <h1 class="h1 t-brown">{{$t('news.title')}}</h1>
       <div class="row fd-c ai-s mt-5 fw-w">
         <div
           v-for="(item, idx) in news"
@@ -13,7 +13,7 @@
             <h3 class="h3 t-gray">{{ item.name }}</h3>
             <div class="t-gray text my-1">{{ item.date }}</div>
             <p class="t-gray text mb-4">{{ item.text }}</p>
-            <app-link :to="`news/news-single`" text="Подробнее" />
+            <app-link :to="`news/news-single`" :text="$t('news.button')" />
           </div>
         </div>
       </div>

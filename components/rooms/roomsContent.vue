@@ -1,8 +1,8 @@
 <template>
   <div class="content b-white">
     <div class="container py-6">
-      <h1 class="h1 t-brown">Комнаты</h1>
-      <div class="row fd-r jc-c mt-5 fw-w">
+      <h1 class="h1 t-brown">{{$t('rooms.title')}}</h1>
+      <!-- <div class="row fd-r jc-c mt-5 fw-w">
         <div v-for="(room, idx) in rooms" :key="idx" class="card shadow m-1">
           <img :src="room.img" class="mb-4" alt="Standart twin" />
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
@@ -22,26 +22,21 @@
             >Забронировать</nuxt-link
           >
         </div>
-      </div>
-      <div
-        v-for="(room, idx) in rooms"
-        :key="idx"
-        class="row pt-6"
-        :id="room.id"
-      >
+      </div>-->
+      <div v-for="(item, idx) in $t('rooms.items')" :key="idx" class="row pt-6" :id="item.id">
         <div class="room">
-          <h2 class="h2">{{ room.name }}</h2>
-          <p class="text t-gray">{{ room.text }}</p>
+          <h2 class="h2">{{ item.name }}</h2>
+          <p class="text t-gray">{{ item.text }}</p>
           <div class="carousel fd-r mt-5">
             <img
-              v-for="(img, idx) in room.images"
+              v-for="(img, idx) in item.img"
               :key="idx"
-              :alt="room.text"
-              :src="img"
+              :alt="item.name"
+              :src="require(`@/assets/rooms/${img}.jpg`)"
               class="pb-1"
             />
           </div>
-          <app-btn text="Забронировать" :to="room.link" class="b-brown mt-2" />
+          <app-btn :text="$t('rooms.button')" :to="item.link" class="b-brown mt-2" />
         </div>
       </div>
       <search-form class="mt-6" />
@@ -51,62 +46,12 @@
 
 <script>
 import SearchForm from "@/components/travelline/searchForm";
-
-import room1 from "@/assets/index/twin-room.png";
-import room2 from "@/assets/index/king-room.png";
-import room3 from "@/assets/index/suite-room.png";
-import room4 from "@/assets/index/econom-room.png";
 import checkIcon from "@/assets/rooms/check.svg";
-
-import king1 from "@/assets/rooms/king1.jpg";
-import king2 from "@/assets/rooms/king2.jpg";
-import king3 from "@/assets/rooms/king3.jpg";
-import king4 from "@/assets/rooms/king4.jpg";
-import king5 from "@/assets/rooms/king5.jpg";
-import AppBtn from "../app/AppBtn.vue";
 
 export default {
   components: { SearchForm },
   data: () => ({
     checkIcon,
-    rooms: [
-      {
-        name: "Standart Twin",
-        img: room1,
-        facilities: ["Кондиционер", "Холодильник", "Душ"],
-        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
-        images: [king1, king2, king3, king4, king5],
-        id: "twin",
-        link: "/booking?room-type=139604",
-      },
-      {
-        name: "Standart King",
-        img: room2,
-        facilities: ["Кондиционер", "Холодильник", "Душ"],
-        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
-        images: [king1, king2, king3, king4, king5],
-        id: "king",
-        link: "/booking?room-type=139605",
-      },
-      {
-        name: "Suite",
-        img: room3,
-        facilities: ["Кондиционер", "Холодильник", "Душ"],
-        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
-        images: [king1, king2, king3, king4, king5],
-        id: "suite",
-        link: "/booking?room-type=139607",
-      },
-      {
-        name: "Econom Standart",
-        img: room4,
-        facilities: ["Кондиционер", "Холодильник", "Душ"],
-        text: "Все номера данной категории оснащены удобной кроватью размером king-size, смарт ТВ, телефоном, мини холодильником с бесплатными безалкогольными напитками, сейфом, шкафом для хранения одежды, отдельной рабочей зоной, мягким халатом и индивидуальными разовыми принадлежностями.",
-        images: [king1, king2, king3, king4, king5],
-        id: "econom",
-        link: "/booking?room-type=139606",
-      },
-    ],
   }),
 };
 </script>
@@ -114,6 +59,9 @@ export default {
 <style lang="scss" scoped>
 .card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
   img {
     transition: 0.3s;
     width: 100%;
@@ -125,6 +73,9 @@ export default {
   }
   a {
     transition: 0.2s;
+    align-self: stretch;
+    position: absolute;
+    bottom: 0;
     &:hover {
       background: #8f7357;
     }
@@ -146,8 +97,9 @@ export default {
 .carousel {
   overflow-x: scroll;
   img {
-    width: 301px;
-    height: 420px;
+    max-width: 301px;
+    width: 100%;
+    height: auto;
     margin-right: 30px;
   }
 }
@@ -155,8 +107,7 @@ export default {
 @media (max-width: 834px) {
   .carousel img {
     margin-right: 10px;
-    width: 151px;
-    height: 270px;
+    max-width: 200px;
   }
 }
 @media (max-width: 480px) {

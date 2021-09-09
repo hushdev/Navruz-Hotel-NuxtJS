@@ -1,7 +1,7 @@
 <template>
   <div class="rooms py-3 b-white">
     <div class="container">
-      <h2 class="h2-decor">Комнаты</h2>
+      <h2 class="h2-decor">{{$t('home.rooms.title')}}</h2>
       <div class="row fd-r fw-w jc-c">
         <nuxt-link
           v-for="(room, idx) in rooms"
@@ -27,6 +27,7 @@ import room1 from "@/assets/index/twin-room.png";
 import room2 from "@/assets/index/king-room.png";
 import room3 from "@/assets/index/suite-room.png";
 import room4 from "@/assets/index/econom-room.png";
+import room5 from "@/assets/index/superior-room.png";
 
 export default {
   components: { SearchForm },
@@ -56,6 +57,12 @@ export default {
         anchor: "#econom",
         link: "/booking?room-type=139606",
       },
+      {
+        name: "Superior King",
+        img: room5,
+        anchor: "#superior",
+        link: "/booking?room-type=139608",
+      },
     ],
   }),
 };
@@ -64,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   overflow: hidden;
+  max-width: 234px;
   img {
     transition: 0.3s;
     width: 100%;
@@ -86,7 +94,9 @@ export default {
 
 @media (max-width: 480px) {
   .card {
-    width: 100%;
+    max-width: 100%;
+    img {
+    }
   }
 }
 </style>

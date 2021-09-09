@@ -1,17 +1,34 @@
 <template>
   <footer class="footer b-white p2">
-    <div class="map">
+    <div class="container map">
       <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A12d7b74f622bf778838e54df31a9fe3829e6da5b592a29d1590bcf4505e53e66&amp;source=constructor"
-        loading="lazy"
+        v-if="$i18n.locale === 'en'"
+        src="https://yandex.com/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
         width="100%"
         height="400"
         frameborder="0"
+        class="shadow border"
+      ></iframe>
+      <iframe
+        v-if="$i18n.locale === 'ru'"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
+        width="100%"
+        height="400"
+        frameborder="0"
+        class="shadow border"
+      ></iframe>
+      <iframe
+        v-if="$i18n.locale === 'uz'"
+        src="https://yandex.uz/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
+        width="100%"
+        height="400"
+        frameborder="0"
+        class="shadow border"
       ></iframe>
     </div>
 
     <div class="container">
-      <div class="news fd-c ai-c">
+      <!-- <div class="news fd-c ai-c">
         <h3 class="h3 fw-b ta-c">Новостная рассылка</h3>
         <p class="text t-gray mt-2 ta-c">
           Подпишитесь чтобы оставаться в курсе последних событий
@@ -25,28 +42,12 @@
           />
           <app-btn text="Подписаться" class="b-brown" />
         </form>
-      </div>
-      <div class="credentials text-S t-gray fd-r jc-b ta-c mt-1 fd-c-XS">
-        <span class="">© 2018—{{ year }} Navruz hotel</span>
+      </div>-->
+      <div class="credentials text-S t-gray fd-r jc-b mt-2 ta-c fd-c-XS">
+        <span class>© 2018—{{ year }} Navruz hotel</span>
         <div class="fd-r aic fd-c-XS">
-          <span class="py-1-XS"
-            >Разработано
-            <a
-              href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc"
-              target="_blank"
-              class="t-brown"
-              >an.ildar</a
-            ></span
-          >
-          <span class="ml-2"
-            >Дизайн
-            <a
-              href="https://kwork.ru/user/zednight13"
-              class="t-brown"
-              target="_blank"
-              >zednight</a
-            ></span
-          >
+          <span v-html="$t('footer.coder')" class="py-1-XS"></span>
+          <span v-if="$i18n.locale !== 'uz'" v-html="$t('footer.design')" class="ml-2"></span>
         </div>
       </div>
     </div>
@@ -70,6 +71,8 @@ export default {
   position: relative;
   .map {
     iframe {
+      border-radius: 15px;
+      overflow: hidden;
     }
   }
   .container {

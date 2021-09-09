@@ -1,49 +1,51 @@
 <template>
   <div class="facilities py-3 b-white">
     <div class="container">
-      <h2 class="h2-decor t-gray">Наши удобства</h2>
+      <h2 class="h2-decor t-gray">{{$t('home.facilities.title')}}</h2>
       <div class="row fd-r fw-w jc-c">
-        <nuxt-link
-          :to="`/facilities${item.anchor}`"
+        <button
+          @click="redirect(item.anchor)"
           v-for="(item, idx) in items"
           :key="idx"
           class="item m-2"
         >
-          <img :src="item.img" :alt="item.name" class="card shadow" />
+          <img :src="require(`assets/index/${item.img}`)" :alt="item.name" class="card shadow" />
           <span class="fs-6 t-white fw-b h2 t-white">{{ item.name }}</span>
-        </nuxt-link>
+        </button>
       </div>
-      <app-btn text="Ещё" class="b-yellow m-c mt-3" />
+      <app-btn :text="$t('home.facilities.button')" :to="localePath('/facilities')" class="b-yellow m-c mt-3" />
     </div>
   </div>
 </template>
 
 <script>
-import poolImg from "@/assets/index/pool.png";
-import barImg from "@/assets/index/bar.png";
-import fitnesImg from "@/assets/index/fitnes.png";
-import billiardImg from "@/assets/index/billiard.png";
-
 export default {
-  data: () => ({
-    items: [
-      { name: "Бассейн", img: poolImg, anchor: "#pool" },
-      { name: "Бар", img: barImg, anchor: "#bar" },
-      { name: "Фитнес зал", img: fitnesImg, anchor: "#fitness" },
-      { name: "Бильярд", img: billiardImg, anchor: "#billiard" },
-    ],
-  }),
+  computed: {
+    items() {
+      return this.$t('home.facilities.items')
+    },
+  },
+  methods: {
+    redirect(anchor) {
+      const path = this.localePath("facilities");
+      this.$router.push(path + anchor);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .facilities {
   .item {
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
     height: auto;
     position: relative;
     cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    padding: 0;
     &:hover {
       span {
         transform: translate(-40%, -50%);

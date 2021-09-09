@@ -33,6 +33,14 @@ button {
   transition: 0.2s;
   a {
     color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   &:hover {
     background: #ffcf3e;

@@ -26,6 +26,10 @@ body, html {
   margin: 0;
   position: relative;
 }
+*::selection {
+  background: #B99470;
+  color: #ffffff;
+}
 
 .container {
   max-width: 1280px;

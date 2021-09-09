@@ -1,16 +1,14 @@
 <template>
   <div id="block-search" class="container">
     <div id="tl-search-form" class="tl-container">
-      <a href="https://travelline.pro/ " rel="nofollow"
-        >система онлайн-бронирования</a
-      >
+      <a href="https://travelline.pro/ " rel="nofollow">система онлайн-бронирования</a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
+  created() {
     if (process.browser) {
       (function (w) {
         var q = [
@@ -54,6 +52,8 @@ export default {
   width: 100%;
   box-sizing: border-box;
   z-index: 9;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .tl-container {
   padding: 0 22px;

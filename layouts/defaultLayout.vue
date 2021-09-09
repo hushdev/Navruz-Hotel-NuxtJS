@@ -9,6 +9,9 @@
 <script>
 export default {
   name: "defaultLayout",
+  async created() {
+    await this.$store.dispatch("fetchPosts", "ru");
+  }
 };
 </script>
 
@@ -32,6 +35,10 @@ export default {
 .menu-leave-to {
   opacity: 0;
   transform: translate3d(0, 15px, 0);
+}
+
+.x-tl-booking-widget-9249 {
+  display: none;
 }
 @keyframes bounce-in {
   0% {

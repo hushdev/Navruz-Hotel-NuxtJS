@@ -5,47 +5,114 @@
       <ul class="desktop-menu container fd-r jc-b">
         <li v-for="(item, idx) in menu" :key="idx">
           <nuxt-link
-            :to="item.to"
+            :to="localePath(item.to)"
             active-class="fw-b t-brown"
             class="decor-n t-gray fd-r ai-c"
             :exact="item.exact"
-            >{{ item.name }}
-          </nuxt-link>
+          >{{ item.name }}</nuxt-link>
         </li>
-        <li class="fw-b t-black lang">RU</li>
+        <li class="fw-b t-black lang">
+          <span @click="showLangs = !showLangs" class="fd-r ai-c">
+            {{ $i18n.locale }}
+            <img src="@/assets/triangle.svg" class="ml-1" />
+          </span>
+          <transition name="menu">
+            <div v-if="showLangs" class="langs fd-c shadow py-2 px-1">
+              <nuxt-link
+                @click.native="
+                    showLangs = !showLangs;
+                  "
+                :to="switchLocalePath('ru')"
+                class="fd-r ai-c"
+              >
+                <img src="@/assets/ru.svg" alt="RU" /> RU
+              </nuxt-link>
+              <nuxt-link
+                @click.native="
+                    showLangs = !showLangs;
+                  "
+                :to="switchLocalePath('uz')"
+                class="mt-2 fd-r ai-c"
+              >
+                <img src="@/assets/uz.svg" alt="UZ" />UZ
+              </nuxt-link>
+              <nuxt-link
+                @click.native="
+                    showLangs = !showLangs;
+                  "
+                :to="switchLocalePath('en')"
+                class="mt-2 fd-r ai-c"
+              >
+                <img src="@/assets/en.svg" alt="EN" />EN
+              </nuxt-link>
+            </div>
+          </transition>
+        </li>
       </ul>
       <!-- TABLET-MOBILE MENU -->
       <transition name="menu">
         <ul v-if="mobile" class="mobile-menu container fd-c jc-b">
           <li v-for="(item, idx) in menu" :key="idx">
             <nuxt-link
-              :to="item.to"
+              :to="localePath(item.to)"
               @click.native="mobile = !mobile"
               active-class="fw-b t-brown"
               :exact="item.exact"
               class="decor-n t-gray fs-6-S"
-              >{{ item.name }}</nuxt-link
-            >
+            >{{ item.name }}</nuxt-link>
           </li>
-          <li class="fw-b t-black lang">RU</li>
         </ul>
       </transition>
     </div>
     <div class="info">
       <div class="container fd-r jc-b ai-c">
-        <nuxt-link @click.native="mobile = false" to="/"
-          ><img
-            src="@/assets/logo.svg"
-            alt="Navruz Hotel Tashkent"
-            class="logo"
-        /></nuxt-link>
-        <a href="tel:+998781501090" class="decor-n t-brown h3 fw-b phone"
-          >+998 78 150-10-90</a
-        >
-        <div @click="mobile = !mobile" class="burger fd-c z-20">
-          <span class="b-brown"></span>
-          <span class="b-brown"></span>
-          <span class="b-brown"></span>
+        <nuxt-link @click.native="mobile = false" :to="localePath('/')">
+          <img src="@/assets/logo.svg" alt="Navruz Hotel Tashkent" class="logo" />
+        </nuxt-link>
+        <a href="tel:+998781501090" class="decor-n t-brown h3 fw-b phone">+998 78 150-10-90</a>
+        <div class="menu-func fd-r ai-c">
+          <li class="fw-b t-black lang">
+            <span @click="showLangs = !showLangs" class="fd-r ai-c">
+              {{ $i18n.locale }}
+              <img src="@/assets/triangle.svg" class="ml-1" />
+            </span>
+            <transition name="menu">
+              <div v-if="showLangs" class="langs fd-c shadow py-2 px-1">
+                <nuxt-link
+                  @click.native="
+                    showLangs = !showLangs;
+                  "
+                  :to="switchLocalePath('ru')"
+                  class="fd-r ai-c"
+                >
+                  <img src="@/assets/ru.svg" alt="RU" /> RU
+                </nuxt-link>
+                <nuxt-link
+                  @click.native="
+                    showLangs = !showLangs;
+                  "
+                  :to="switchLocalePath('uz')"
+                  class="mt-2 fd-r ai-c"
+                >
+                  <img src="@/assets/uz.svg" alt="UZ" />UZ
+                </nuxt-link>
+                <nuxt-link
+                  @click.native="
+                    showLangs = !showLangs;
+                  "
+                  :to="switchLocalePath('en')"
+                  class="mt-2 fd-r ai-c"
+                >
+                  <img src="@/assets/en.svg" alt="EN" />EN
+                </nuxt-link>
+              </div>
+            </transition>
+          </li>
+          <div @click="mobile = !mobile" class="burger fd-c z-20 ml-2">
+            <span class="b-brown"></span>
+            <span class="b-brown"></span>
+            <span class="b-brown"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -54,11 +121,17 @@
 
 <script>
 export default {
+  computed: {
+     menu() {
+      return this.$t('menu')
+    }
+  },
   data() {
     return {
       shouldMenuShow: true,
       mobile: false,
-      menu: [
+      showLangs: false,
+      menu1: [
         { name: "Главная", to: "/", exact: true },
         { name: "Бронирование", to: "/booking", exact: false },
         { name: "О нас", to: "/about", exact: false },
@@ -73,6 +146,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.lang {
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  .langs {
+    position: absolute;
+    background: #fff;
+    z-index: 50;
+    right: 0;
+    bottom: -140px;
+    display: flex;
+    width: 67px;
+    a {
+      cursor: pointer;
+      color: #000000;
+      img {
+        max-width: 20px;
+        height: auto;
+        margin-right: 5px;
+      }
+    }
+  }
+}
 .nav {
   .menu {
     border-bottom: 2px solid #d9d9d9;
@@ -81,19 +178,27 @@ export default {
     }
   }
   .info {
-    .burger {
-      display: none;
-    }
     .logo {
       max-width: 159px;
       width: 100%;
       height: auto;
+    }
+    .menu-func {
+      display: none;
     }
   }
 }
 @media screen and (max-width: 834px) {
   .nav {
     position: relative;
+    .info {
+      .menu-func {
+        display: flex;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
     .menu {
       z-index: 20;
       padding: 0;
@@ -170,7 +275,6 @@ export default {
       margin: 5px;
       width: calc(100% - 10px);
       box-shadow: 0px 5px 29px rgba(97, 97, 97, 0.25);
-      overflow: hidden;
     }
   }
 }

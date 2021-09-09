@@ -5,7 +5,7 @@
     </div>
     <div class="content b-white">
       <div class="container py-6">
-        <h1 class="h1 t-brown mb-6">Бронирование</h1>
+        <h1 class="h1 t-brown mb-6">{{$t('booking.title')}}</h1>
         <booking-form/>
       </div>
     </div>

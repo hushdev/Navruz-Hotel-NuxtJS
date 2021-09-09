@@ -265,6 +265,10 @@ $normal: 400;
   }
 }
 
+.h1-mobile {
+  display: none;
+}
+
 .h2 {
   font-size: 34px;
   position: relative;
@@ -341,6 +345,7 @@ $normal: 400;
   .h1 {
     font-size: 35px !important;
   }
+
   h1 {
     font-size: 35px !important;
   }
@@ -369,15 +374,17 @@ $normal: 400;
 @media (max-width: 480px) {
   .h1 {
     font-size: 28px !important;
+    display: none;
   }
+
+  .h1-mobile {
+    display: inline;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px #282828;
+  }
+
   h1 {
     font-size: 28px !important;
-
-    span {
-      background: transparent !important;
-      color: #ffffff !important;
-      padding: 0 !important;
-    }
   }
 
   .h2,

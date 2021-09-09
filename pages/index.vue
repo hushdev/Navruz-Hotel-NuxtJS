@@ -27,6 +27,7 @@ export default {
     HomeNews,
   },
   layout: "defaultLayout",
+  
 };
 </script>
 
