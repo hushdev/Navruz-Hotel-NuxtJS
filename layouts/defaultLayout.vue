@@ -1,5 +1,6 @@
 <template>
   <div>
+    <app-loader />
     <app-nav />
     <Nuxt />
     <app-footer />
@@ -9,9 +10,17 @@
 <script>
 export default {
   name: "defaultLayout",
+  metaInfo() {
+    return {
+      title: this.$t("meta.title"),
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+    };
+  },
   async created() {
     await this.$store.dispatch("fetchPosts", "ru");
-  }
+  },
 };
 </script>
 
@@ -35,10 +44,9 @@ export default {
   transform: translate3d(0, 15px, 0);
 }
 
-
 .menu-enter-active,
 .menu-leave-active {
-  transition: opacity .15s ease-in-out, transform 0.25s ease-in-out;
+  transition: opacity 0.15s ease-in-out, transform 0.25s ease-in-out;
 }
 .menu-enter,
 .menu-leave-to {

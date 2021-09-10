@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: '"Navruz Hotel" mehmonxonasi - rasmiy sayti',
+    description: 'Iş va dam oliş uchun qulay mehmonxona Toshkentda birinchi raqamli'
+  },
   footer: {
     coder: '<a href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc" target="_blank" class="t-brown" >An.ildar</a> va <a href="https://kwork.ru/user/zednight13" class="t-brown" target="_blank" >Zednight</a> tomonidan ishlab chiqilgan',
     design: null
@@ -14,7 +18,7 @@ export default {
   ],
   home: {
     offer: {
-      title: ['Ish va dam olish', 'uchun qulay mehmonxona', 'Toshkentda birinchi raqamli'],
+      title: ['Iş va dam oliş', 'uchun qulay mehmonxona', 'Toshkentda birinchi raqamli'],
       button: "Bron qiling",
       text: "Biz ijtimoiy tarmoqlarda"
     },
@@ -37,13 +41,14 @@ export default {
     },
     facilities: {
       title: "Ob'ektlar",
+    
       items: [
         { name: "Suzish xavzasi", img: "pool.png", anchor: "#pool" },
         { name: "Bar", img: "bar.png", anchor: "#bar" },
-        { name: "Sportzal", img: "fitnes.png", anchor: "#fitness" },
+        { name: "Sportzal", img: "fitnes.png", anchor: "#gym" },
         { name: "Billiard xonasi", img: "billiard.png", anchor: "#billiard" },
-        { name: "Restoran", img: "restoran.jpg", anchor: "#restoran" },
-        { name: "Konferents-zallar", img: "max-hall.jpg", anchor: "#hall" },
+        { name: "Restoran", img: "restoran.jpg", anchor: "#restaurant" },
+        { name: "Konferents-zallar", img: "max-hall.jpg", anchor: "#conference" },
       ],
       button: "Ko'proq"
     },
@@ -144,14 +149,15 @@ export default {
         text: "Jismoniy holatni yaxşi uşlab turiş uçun mehmonxonada fitness zal taşkil qilingan va u keça-kunduz işlaydi.",
         img: ["gym1", "gym2", "gym3", "gym4", "gym5",],
         id: 'gym',
-        id: 'billiard'
 
 
       },
       {
         name: "Bilyard",
         text: "Katta televizorga ega bo’lgan bilyard xonasi mehmonlarni vaqtini maroqli o’tişiga yordam beradi va u keça-kunduz işlaydi. ",
-        img: ["billiard1", "billiard2", "billiard3"]
+        img: ["billiard1", "billiard2", "billiard3"],
+        id: 'billiard'
+
       },
       {
         name: "Konferentsia zallari",

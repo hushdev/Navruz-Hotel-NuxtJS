@@ -85,6 +85,13 @@ export default {
 
 <style lang="scss" scoped>
 .contacts-content {
+  .container {
+    .form {
+      .row {
+        
+      }
+    }
+  }
   textarea {
     resize: none;
     height: 100px;

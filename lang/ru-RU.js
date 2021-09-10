@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Гостиница "Navruz hotel" - официальный сайт гостиницы "Navruz hotel" в Ташкенте',
+    description: 'Уютный отель для бизнеса и отдыха. Номер один в Ташкенте.'
+  },
   footer: {
     coder: 'Разработано <a href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc" target="_blank" class="t-brown" >an.ildar</a>',
     design: 'Дизайн <a href="https://kwork.ru/user/zednight13" class="t-brown" target="_blank" >zednight</a>'
@@ -40,10 +44,10 @@ export default {
       items: [
         { name: "Бассейн", img: "pool.png", anchor: "#pool" },
         { name: "Бар", img: "bar.png", anchor: "#bar" },
-        { name: "Фитнес зал", img: "fitnes.png", anchor: "#fitness" },
+        { name: "Фитнес зал", img: "fitnes.png", anchor: "#gym" },
         { name: "Бильярд", img: "billiard.png", anchor: "#billiard" },
-        { name: "Ресторан", img: "restoran.jpg", anchor: "#restoran" },
-        { name: "Концеренц залы", img: "max-hall.jpg", anchor: "#hall" },
+        { name: "Ресторан", img: "restoran.jpg", anchor: "#restaurant" },
+        { name: "Концеренц залы", img: "max-hall.jpg", anchor: "#conference" },
       ],
       button: "Еще"
     },

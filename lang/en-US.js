@@ -1,4 +1,8 @@
 export default {
+  meta: {
+    title: 'Navruz hotel - official website of the Navruz hotel in Tashkent',
+    description: 'Comfortable hotel for business and leisure. №1 in Tashkent.'
+  },
   footer: {
     coder: 'Developed by <a href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc" target="_blank" class="t-brown" >an.ildar</a>',
     design: 'Designed by <a href="https://kwork.ru/user/zednight13" class="t-brown" target="_blank" >zednight</a>'
@@ -36,13 +40,14 @@ export default {
     },
     facilities: {
       title: "Facilities",
+      
       items: [
         { name: "Swimming pool", img: "pool.png", anchor: "#pool" },
         { name: "Bar", img: "bar.png", anchor: "#bar" },
-        { name: "Gym", img: "fitnes.png", anchor: "#fitness" },
+        { name: "Gym", img: "fitnes.png", anchor: "#gym" },
         { name: "Billiard room", img: "billiard.png", anchor: "#billiard" },
-        { name: "A restaurant", img: "restoran.jpg", anchor: "#restoran" },
-        { name: "Conference rooms", img: "max-hall.jpg", anchor: "#hall" },
+        { name: "A restaurant", img: "restoran.jpg", anchor: "#restaurant" },
+        { name: "Conference rooms", img: "max-hall.jpg", anchor: "#conference" },
       ],
       button: "More"
     },
@@ -130,6 +135,7 @@ export default {
   },
   facilities: {
     title: 'Facilities',
+    
     items: [
       {
         name: "Outdoor swimming pool",

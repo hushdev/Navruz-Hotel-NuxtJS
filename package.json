@@ -12,6 +12,8 @@
     "@nuxtjs/i18n": "^7.0.3",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
+    "nuxt-lazy-load": "^1.2.7",
+    "vue-meta": "^2.4.0",
     "vue-session": "^1.0.0",
     "vue-slick-carousel": "^1.0.6"
   },

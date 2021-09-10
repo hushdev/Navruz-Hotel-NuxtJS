@@ -96,10 +96,11 @@ export default {
 }
 .carousel {
   overflow-x: scroll;
+  display: flex;
+  align-items: center;
   img {
-    max-width: 301px;
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 350px;
     margin-right: 30px;
   }
 }
@@ -107,10 +108,15 @@ export default {
 @media (max-width: 834px) {
   .carousel img {
     margin-right: 10px;
-    max-width: 200px;
+    max-height: 250px;
   }
 }
+
 @media (max-width: 480px) {
+  .carousel img {
+    margin-right: 10px;
+    max-height: 200px;
+  }
   .card {
     width: 100%;
   }

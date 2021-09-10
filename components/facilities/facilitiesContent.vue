@@ -17,7 +17,6 @@
             :key="idx"
             :alt="item.name"
             :src="require(`assets/facilities/${image}.jpg`)"
-            :class="{horizontal: item.horizontal}"
             class="pb-1"
           />
         </div>
@@ -39,23 +38,22 @@ export default {
 .carousel {
   overflow-x: scroll;
   img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 350px;
     margin-right: 30px;
-  }
-  .horizontal {
-    max-width: 350px;
   }
 }
 
 @media (max-width: 834px) {
   .carousel img {
     margin-right: 10px;
-    max-width: 151px;
+    max-height: 250px;
   }
-  .horizontal {
-    max-width: 250px;
+}
+@media (max-width: 480px) {
+  .carousel img {
+    margin-right: 10px;
+    max-height: 200px;
   }
 }
 </style>
