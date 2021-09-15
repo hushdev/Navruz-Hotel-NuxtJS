@@ -13,9 +13,9 @@
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
         </nuxt-link>
       </div>
-      <div class="ta-c h3 t-brown mt-6">
+      <!-- <div class="ta-c h3 t-brown mt-6">
         <search-form :locale="$i18n.locale"/>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -94,8 +94,9 @@ export default {
 
 @media (max-width: 480px) {
   .card {
-    max-width: 100%;
+    max-width: 250px;
     img {
+      // min-width: 100%;
     }
   }
 }

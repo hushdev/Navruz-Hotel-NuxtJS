@@ -1,6 +1,5 @@
 <template>
   <div>
-    <app-loader />
     <app-nav />
     <Nuxt />
     <app-footer />
@@ -16,6 +15,10 @@ export default {
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "../favicon.png" }],
     };
   },
   async created() {
@@ -53,10 +56,7 @@ export default {
   opacity: 0;
   transform: translate3d(0, 15px, 0);
 }
-
-.x-tl-booking-widget-9249 {
-  display: none;
-}
+  
 @keyframes bounce-in {
   0% {
     transform: scale(0);

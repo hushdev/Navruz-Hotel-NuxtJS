@@ -1,4 +1,5 @@
 <template>
+  <!-- May be added in the future -->
   <div class="loader" :class="{'loader-hide': loaded}">
     <div class="lds-ellipsis">
       <div></div>

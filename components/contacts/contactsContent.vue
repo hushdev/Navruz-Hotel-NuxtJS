@@ -4,9 +4,7 @@
       <div class="row fd-r ai-c">
         <form class="w-35 fd-c card shadow pt-3 pb-5 px-5">
           <h2 class="h3 h3-decor t-gray">{{$t('contacts.form.title')}}</h2>
-          <p class="t-gray text mt-3 mb-3">
-            {{$t('contacts.form.sub')}}
-          </p>
+          <p class="t-gray text mt-3 mb-3">{{$t('contacts.form.sub')}}</p>
           <input
             class="input px-2 py-1 mb-3 t-gray"
             type="text"
@@ -24,10 +22,7 @@
             autocomplete="phone"
             :placeholder="$t('contacts.form.phone')"
           />
-          <textarea
-            class="input px-2 py-1 mb-3 t-gray"
-            :placeholder="$t('contacts.form.message')"
-          ></textarea>
+          <textarea class="input px-2 py-1 mb-3 t-gray" :placeholder="$t('contacts.form.message')"></textarea>
           <app-btn
             type="submit"
             :text="$t('contacts.form.button')"
@@ -37,17 +32,13 @@
         </form>
         <div class="content w-50 ml-6">
           <h2 class="h2 h2-decor-brown">{{$t('contacts.title')}}</h2>
-          <p class="text t-black mb-3">
-            {{$t('contacts.adress')}}
-          </p>
+          <p class="text t-black mb-3">{{$t('contacts.adress')}}</p>
           <p class="text t-black mb-3">
             {{$t('contacts.phone')}}
             <a href="tel:+998781501090" class="t-brown">(+998) 78 150 10 90</a>
           </p>
           <p class="text t-black">
-            <a href="mailto:info@navruzhotel.uz" class="t-brown"
-              >info@navruzhotel.uz</a
-            >
+            <a href="mailto:info@navruzhotel.uz" class="t-brown">info@navruzhotel.uz</a>
           </p>
           <ul class="socials fd-r ai-c mt-3">
             <li>
@@ -88,7 +79,6 @@ export default {
   .container {
     .form {
       .row {
-        
       }
     }
   }

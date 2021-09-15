@@ -1,6 +1,6 @@
 <template>
-  <div class="offer fd-c pt-6 pb-4">
-    <div class="container card fd-c ai-s pt-6">
+  <div class="offer fd-c pt-6 pb-4 px-1">
+    <div class="container card fd-c ai-c ta-c pt-6">
       <h1 class="h1 h1-offer t-gray">
         <span class="d-iblock">{{$t('home.offer.title[0]')}}</span>
         <br />
@@ -13,9 +13,12 @@
         {{$t('home.offer.title[1]')}}
         {{$t('home.offer.title[2]')}}
       </h1>
-      <app-btn :text="$t('home.offer.button')" :to="localePath('/booking')" class="b-brown mt-3" />
+      <!-- <app-btn :text="$t('home.offer.button')" :to="localePath('/booking')" class="b-brown mt-3" /> -->
     </div>
-    <div class="container socials container mt-6 pt-6">
+    <div class="module ta-c h3 t-brown mt-6">
+      <search-form :locale="$i18n.locale" />
+    </div>
+    <!-- <div class="container socials container mt-6 pt-6">
       <div class="text t-white mb-1">{{$t('home.offer.text')}}</div>
       <div class="fd-r">
         <a href="https://www.instagram.com/navruzhotel/" target="_blank">
@@ -28,15 +31,16 @@
           <img src="@/assets/index/telegram.svg" alt="Telegram" />
         </a>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
 import AppBtn from "@/components/app/AppBtn.vue";
+import SearchForm from "@/components/travelline/searchForm.vue";
 
 export default {
-  components: { AppBtn },
+  components: { AppBtn, SearchForm },
 };
 </script>
 
@@ -77,6 +81,14 @@ export default {
         margin-bottom: 0;
         margin-right: 15px;
       }
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .offer {
+    .module {
+      margin-top: 20px !important;
     }
   }
 }
