@@ -1,7 +1,7 @@
 <template>
   <div class="menu-content b-white">
     <transition name="page">
-      <menu-modal :data="modalData" v-if="showModal" @closeModal="showModal = false"/>
+      <menu-modal :data="modalData" v-if="showModal" @closeModal="showModal = false" />
     </transition>
     <div class="container py-6 fd-c ai-c">
       <h1 class="h1 t-brown">{{$t('bar.title')}}</h1>
@@ -20,7 +20,7 @@
       <h1 class="h1 t-brown mt-6">{{$t('bar.title2')}}</h1>
       <div class="row fd-r fw-w jc-c mt-5">
         <!-- BAR CARD -->
-         <div
+        <div
           v-for="(item, idx) in $t('bar.items2')"
           :key="idx"
           @click="showModalHandler(item)"
@@ -37,7 +37,6 @@
 <script>
 //components
 import MenuModal from "@/components/modals/MenuModal";
-
 //menu items
 import item1 from "@/assets/menu/salads.jpg";
 import item2 from "@/assets/menu/hot.jpg";
@@ -45,7 +44,6 @@ import item3 from "@/assets/menu/soups.jpg";
 import item4 from "@/assets/menu/pasta.jpg";
 import item5 from "@/assets/menu/hot2.jpg";
 import item6 from "@/assets/menu/pizza.jpg";
-
 // bar-map items
 import item7 from "@/assets/menu/hotDrinks.jpg";
 import item8 from "@/assets/menu/iceDrinks.jpg";
@@ -55,8 +53,8 @@ export default {
   components: { MenuModal },
   methods: {
     showModalHandler(value) {
-      this.modalData = value
-      this.showModal = true
+      this.modalData = value;
+      this.showModal = true;
     },
   },
   data: () => ({

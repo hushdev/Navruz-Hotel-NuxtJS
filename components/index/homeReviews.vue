@@ -8,7 +8,11 @@
         <div v-for="(item, idx) in reviews" :key="idx" class="px-6 mb-4 mt-3 px-1-XS">
           <div class="wrap b-white card shadow py-4 px-3">
             <div class="fd-r jc-l">
-              <img :src="require(`@/assets/index/${item.img}`)" class="review-avatar" :alt="item.text" />
+              <img
+                :src="require(`@/assets/index/${item.img}`)"
+                class="review-avatar"
+                :alt="item.text"
+              />
               <div class="title fd-c ml-1">
                 <span class="t-black text fw-b">{{ item.name }}</span>
                 <img class="review-img" src="@/assets/index/stars.svg" alt="5 stars!" />
@@ -35,7 +39,7 @@ export default {
   components: { VueSlickCarousel },
   computed: {
     reviews() {
-      return this.$t('home.reviews.items')
+      return this.$t("home.reviews.items");
     },
   },
   data: () => ({
@@ -107,22 +111,24 @@ export default {
   }
   .review-img {
     max-width: 100px;
-    
-  }
-  .slick-arrow {
-    width: 50px;
-    z-index: 1 !important;
   }
   .slick-prev:before,
   .slick-next:before {
-    color: #b99470 !important;
-    font-size: 30px;
-  }
-  .slick-prev {
-    transform: translateX(25px);
-  }
-  .slick-next {
-    transform: translateX(-25px);
+    background: #b99470;
+    border-radius: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    color: #ffffff;
+    content: 0;
+    font-size: 17px;
+    position: absolute;
+    left: calc(50% - 15px);
+    top: -5px;
+    padding: 7px;
+    padding-top: 8px;
+    box-shadow: 0px 2px 5px rgba(97, 97, 97, 0.25);
   }
   .card {
     display: block;

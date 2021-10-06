@@ -2,47 +2,16 @@
   <footer class="footer b-white p2">
     <div class="container map">
       <iframe
-        v-if="$i18n.locale === 'en'"
-        src="https://yandex.com/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
+        :src='`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.799345849854!2d69.28380981495592!3d41.334976407206355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bf49b954dd3%3A0x8b6b32b227cbe29e!2sNavruz%20Hotel%20Tashkent!5e0!3m2!1s${$i18n.locale}!2spl!4v1633181354135!5m2!1s${$i18n.locale}!2spl`'
         width="100%"
         height="400"
-        frameborder="0"
+        style="border:0;"
         class="shadow border"
-      ></iframe>
-      <iframe
-        v-if="$i18n.locale === 'ru'"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
-        width="100%"
-        height="400"
-        frameborder="0"
-        class="shadow border"
-      ></iframe>
-      <iframe
-        v-if="$i18n.locale === 'uz'"
-        src="https://yandex.uz/map-widget/v1/?um=constructor%3A54443d9c17e6197972dc953895b5af34a9a27dd779003239eb9a470ae8e218a0&amp;source=constructor"
-        width="100%"
-        height="400"
-        frameborder="0"
-        class="shadow border"
+        allowfullscreen
+        loading="lazy"
       ></iframe>
     </div>
-
     <div class="container">
-      <!-- <div class="news fd-c ai-c">
-        <h3 class="h3 fw-b ta-c">Новостная рассылка</h3>
-        <p class="text t-gray mt-2 ta-c">
-          Подпишитесь чтобы оставаться в курсе последних событий
-        </p>
-        <form @submit.prevent class="mt-2 fd-r jc-c">
-          <input
-            type="email"
-            placeholder="Email"
-            autocomplete="email"
-            class="input mr-1 px-2 py-1 text-S t-gray fs-2"
-          />
-          <app-btn text="Подписаться" class="b-brown" />
-        </form>
-      </div>-->
       <div class="credentials text-S t-gray fd-r jc-b mt-2 ta-c fd-c-XS">
         <span class>© 2018—{{ year }} Navruz hotel</span>
         <div class="fd-r aic fd-c-XS">

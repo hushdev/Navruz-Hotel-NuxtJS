@@ -1,37 +1,14 @@
 <template>
-  <div class="offer fd-c pt-6 pb-4 px-1">
-    <div class="container card fd-c ai-c ta-c pt-6">
-      <h1 class="h1 h1-offer t-gray">
-        <span class="d-iblock">{{$t('home.offer.title[0]')}}</span>
-        <br />
-        <span class="d-iblock">{{$t('home.offer.title[1]')}}</span>
-        <br />
-        <span class="d-iblock">{{$t('home.offer.title[2]')}}</span>
-      </h1>
-      <h1 class="h1 h1-mobile t-gray">
-        {{$t('home.offer.title[0]')}}
-        {{$t('home.offer.title[1]')}}
-        {{$t('home.offer.title[2]')}}
-      </h1>
-      <!-- <app-btn :text="$t('home.offer.button')" :to="localePath('/booking')" class="b-brown mt-3" /> -->
-    </div>
-    <div class="module ta-c h3 t-brown mt-6">
-      <search-form :locale="$i18n.locale" />
-    </div>
-    <!-- <div class="container socials container mt-6 pt-6">
-      <div class="text t-white mb-1">{{$t('home.offer.text')}}</div>
-      <div class="fd-r">
-        <a href="https://www.instagram.com/navruzhotel/" target="_blank">
-          <img src="@/assets/index/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="https://www.facebook.com/hotelnavruz/" target="_blank" class="mx-2">
-          <img src="@/assets/index/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://t.me/navruzhotel" target="_blank">
-          <img src="@/assets/index/telegram.svg" alt="Telegram" />
-        </a>
+  <div class="offer fd-c pt-6 pb-4 px-1 pt-6">
+    <div class="container fd-r ai-c jc-b pt-6">
+      <div class="card fd-c ai-c ta-c mr-3">
+        <h1 class="h1 h1-mobile t-gray">{{$t('home.offer.title')}}</h1>
+        <app-btn :text="$t('home.offer.button')" :to="localePath('/booking')" class="b-brown mt-3" />
       </div>
-    </div>-->
+      <div class="module ta-c h3 t-brown">
+        <search-form :locale="$i18n.locale" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -51,21 +28,32 @@ export default {
   justify-content: center;
   background-size: cover;
   position: relative;
-  .socials {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .socials a img {
-    transition: 0.2s;
-  }
-  .socials a:hover {
-    img {
-      filter: brightness(85%);
+  .container {
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .socials {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .socials a img {
+      transition: 0.2s;
+    }
+    .socials a:hover {
+      img {
+        filter: brightness(85%);
+      }
+    }
+    .module {
+      max-width: 320px;
+      width: 100%;
     }
   }
 }
@@ -73,19 +61,26 @@ export default {
 @media (max-width: 834px) {
   .offer {
     min-height: 100vh;
-    .socials {
-      flex-direction: row;
+    .container {
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      .text {
-        margin-bottom: 0;
-        margin-right: 15px;
+      .card {
+        text-align: center;
+        h1 {
+          text-align: center;
+        }
+        button {
+          display: none;
+        }
+      }
+      .module {
+        margin-top: 30px;
       }
     }
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .offer {
     .module {
       margin-top: 20px !important;

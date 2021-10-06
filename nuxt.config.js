@@ -49,12 +49,12 @@ export default {
     '@nuxtjs/i18n',
     ['nuxt-lazy-load', {
       // These are the default values
-      images: true,
-      videos: true,
-      audios: true,
-      iframes: true,
+      images: false,
+      videos: false,
+      audios: false,
+      iframes: false,
       native: false,
-      polyfill: true,
+      polyfill: false,
       directiveOnly: false,
     }]
   ],

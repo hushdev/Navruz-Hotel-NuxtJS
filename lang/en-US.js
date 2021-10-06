@@ -18,7 +18,7 @@ export default {
   ],
   home: {
     offer: {
-      title: ['Comfortable hotel for', 'business and leisure', '№1 in Tashkent'],
+      title: 'Cozy hotel for business and leisure in the business center of Tashkent',
       button: "Book",
       text: "Follow us on"
     },

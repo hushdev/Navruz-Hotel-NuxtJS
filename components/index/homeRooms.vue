@@ -9,7 +9,7 @@
           :to="room.link"
           class="card shadow pb-5 m-1"
         >
-          <img :src="room.img" class="mb-4" alt="Standart twin" />
+          <img :src="room.img" class="mb-4" :alt="room.name" />
           <h3 class="h3 h3-decor t-brown ml-3">{{ room.name }}</h3>
         </nuxt-link>
       </div>

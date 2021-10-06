@@ -84,8 +84,8 @@ export default {
         }
       }
       img {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
         transition: 0.2s;
       }
     }

@@ -266,7 +266,11 @@ $normal: 400;
 }
 
 .h1-mobile {
-  display: none;
+  display: inline;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px #282828;
+  max-width: 480px;
+  text-align: left;
 }
 
 .h2 {
@@ -375,16 +379,12 @@ $normal: 400;
   .h1 {
     font-size: 28px !important;
   }
-  
+
   .h1-offer {
     display: none;
   }
 
-  .h1-mobile {
-    display: inline;
-    color: #ffffff;
-    text-shadow: 1px 1px 5px #282828;
-  }
+
 
   h1 {
     font-size: 28px !important;

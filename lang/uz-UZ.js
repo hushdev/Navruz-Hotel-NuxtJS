@@ -18,9 +18,9 @@ export default {
   ],
   home: {
     offer: {
-      title: ['Iş va dam oliş', 'uchun qulay mehmonxona', 'Toshkentda birinchi raqamli'],
+      title: 'Cozy hotel for business and leisure in the business center of Tashkent',
       button: "Bron qiling",
-      text: "Biz ijtimoiy tarmoqlarda"
+      text: "Toshkentning markazida joylashgan shinam mehmonxona"
     },
     about: {
       title: 'Biz haqimizda ',

@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 .booking-offer {
   .offer {
-    background: url("@/assets/rooms/bg.jpg") no-repeat center;
+    background: url("@/assets/booking/bg.jpg") no-repeat center;
     background-size: cover;
     height: 400px;
     width: 100%;
