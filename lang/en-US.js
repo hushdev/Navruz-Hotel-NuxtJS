@@ -3,6 +3,10 @@ export default {
     title: 'Navruz hotel - official website of the Navruz hotel in Tashkent',
     description: 'Comfortable hotel for business and leisure. №1 in Tashkent.'
   },
+  errors: {
+    404: "Welcome to the 404 page! You are here because you entered the address of a page that no longer exists or has been moved to a different address.",
+    button: "Open the main page"
+  },
   footer: {
     coder: 'Developed by <a href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc" target="_blank" class="t-brown" >an.ildar</a>',
     design: 'Designed by <a href="https://kwork.ru/user/zednight13" class="t-brown" target="_blank" >zednight</a>'
@@ -20,7 +24,6 @@ export default {
     offer: {
       title: 'Cozy hotel for business and leisure in the business center of Tashkent',
       button: "Book",
-      text: "Follow us on"
     },
     about: {
       title: 'About us',
@@ -40,7 +43,7 @@ export default {
     },
     facilities: {
       title: "Facilities",
-      
+
       items: [
         { name: "Swimming pool", img: "pool.png", anchor: "#pool" },
         { name: "Bar", img: "bar.png", anchor: "#bar" },
@@ -129,13 +132,13 @@ export default {
         text: "Spacious room with a comfortable king-size bed, smart TV, telephone, mini fridge, safe, wardrobe, separate work area and individual disposable accessories. The total area of the room is 25 sq.m. The room rate includes breakfast, mini bar with soft drinks, gym and outdoor pool.",
         img: ["superior1", "superior2", "superior3"],
         id: "superior",
-        link: "booking?room-type=139606",
+        link: "booking?room-type=152646",
       }
     ]
   },
   facilities: {
     title: 'Facilities',
-    
+
     items: [
       {
         name: "Outdoor swimming pool",
@@ -195,11 +198,16 @@ export default {
       phone: "Phone number",
       message: "Message",
       button: "Send"
-    }
+    },
+    contact: "Contact us"
   },
   news: {
     title: "Latest news",
     button: "More"
+  },
+  article: {
+    error: 'The blog is in the process of being published ...',
+    button: "Back"
   },
   bar: {
     title: "Menu",

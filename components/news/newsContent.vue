@@ -1,65 +1,44 @@
 <template>
   <div class="news-content b-white">
-    <div class="container py-6">
+    <div v-if="getPosts.length" class="container py-6">
       <h1 class="h1 t-brown">{{$t('news.title')}}</h1>
-      <div class="row fd-c ai-s mt-5 fw-w">
+      <div class="row fd-r ai-s jc-c mt-3 fw-w">
         <div
-          v-for="(item, idx) in news"
+          v-for="(item, idx) in getPosts"
           :key="idx"
-          class="card shadow fd-r ai-c w-80 mt-4"
+          class="card shadow fd-c ai-t jc-b w-40 w-100-XS mt-2 mr-1 ml-1 px-4 py-4"
         >
-          <img :src="item.img" :alt="item.name" />
-          <div class="content px-2 py-2 py-4-XS">
-            <h3 class="h3 t-gray">{{ item.name }}</h3>
-            <div class="t-gray text my-1">{{ item.date }}</div>
-            <p class="t-gray text mb-4">{{ item.text }}</p>
-            <app-link :to="`news/news-single`" :text="$t('news.button')" />
+          <div>
+            <h3 class="h3 t-gray">{{ item.title.rendered }}</h3>
+            <div class="t-gray text-S my-1">{{ item.date.slice(0, 10) }}</div>
+            <p v-html="item.content.rendered.substr(0, 50)" class="t-gray text mb-4"></p>
           </div>
+          <app-link
+            :to="`news/article`"
+            @click.native="setArticle(item)"
+            :text="$t('news.button')"
+            class="text"
+          />
         </div>
       </div>
       <search-form :locale="$i18n.locale" class="travel-search mt-6" />
+    </div>
+    <div v-else class="container py-6">
+      <h1 class="h1 t-brown">{{$t('news.title')}}</h1>
+
+      <p class="h3 t-gray mt-3">{{$t('article.error')}}</p>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 import SearchForm from "@/components/travelline/searchForm";
-import newExample from "@/assets/news/newExample.jpg";
 
 export default {
   components: { SearchForm },
-  data: () => ({
-    news: [
-      {
-        name: "С праздником навруз!",
-        date: "21.03.2021",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        id: 1,
-        img: newExample,
-      },
-      {
-        name: "С праздником навруз!",
-        date: "21.03.2021",
-        text: "Уважаемые гости см праздником – Навруз!",
-        id: 2,
-        img: newExample,
-      },
-      {
-        name: "С праздником навруз!",
-        date: "21.03.2021",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        id: 3,
-        img: newExample,
-      },
-      {
-        name: "С праздником навруз!",
-        date: "21.03.2021",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        id: 4,
-        img: newExample,
-      },
-    ],
-  }),
+  methods: { ...mapMutations(["setArticle"]) },
+  computed: { ...mapGetters(["getPosts"]) },
 };
 </script>
 
@@ -91,19 +70,6 @@ export default {
   }
 }
 
-@media (max-width: 1051px) {
-  .news-content {
-    .row {
-      .card {
-        width: 100%;
-        img {
-          max-width: 400px;
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 834px) {
   .news-content {
     .row {
@@ -113,20 +79,18 @@ export default {
       align-items: stretch;
       .card {
         flex-direction: column;
-        max-width: 300px;
-        margin: 10px;
-        py-4-XS img {
-          max-width: 100%;
-        }
+        width: 47%;
       }
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 610px) {
   .news-content {
     .row {
       .card {
-        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
       }
     }
   }

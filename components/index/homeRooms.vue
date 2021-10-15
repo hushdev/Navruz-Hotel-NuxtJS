@@ -61,7 +61,7 @@ export default {
         name: "Superior King",
         img: room5,
         anchor: "#superior",
-        link: "/booking?room-type=139609",
+        link: "/booking?room-type=152646",
       },
     ],
   }),

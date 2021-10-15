@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import ContactsOffer from "@/components/contacts/contactsOffer.vue";
-import ContactsContent from "@/components/contacts/contactsContent.vue";
+import ContactsOffer from "@/components/contacts/contactsOffer";
+import ContactsContent from "@/components/contacts/contactsContent";
 
 export default {
   layout: "defaultLayout",

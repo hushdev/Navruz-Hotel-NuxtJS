@@ -3,6 +3,10 @@ export default {
     title: '"Navruz Hotel" mehmonxonasi - rasmiy sayti',
     description: 'Iş va dam oliş uchun qulay mehmonxona Toshkentda birinchi raqamli'
   },
+  errors: {
+    404: "404 sahifasiga xush kelibsiz! Siz bu yerdasiz, chunki siz endi mavjud bo'lmagan yoki boshqa manzilga ko'chirilgan sahifaning manzilini kiritdingiz.",
+    button: "Asosiy sahifani oching"
+  },
   footer: {
     coder: '<a href="https://www.upwork.com/freelancers/~01aa7aa6602c9494dc" target="_blank" class="t-brown" >An.ildar</a> va <a href="https://kwork.ru/user/zednight13" class="t-brown" target="_blank" >Zednight</a> tomonidan ishlab chiqilgan',
     design: null
@@ -18,9 +22,8 @@ export default {
   ],
   home: {
     offer: {
-      title: 'Cozy hotel for business and leisure in the business center of Tashkent',
+      title: 'Toshkentning markazida joylashgan shinam mehmonxona',
       button: "Bron qiling",
-      text: "Toshkentning markazida joylashgan shinam mehmonxona"
     },
     about: {
       title: 'Biz haqimizda ',
@@ -116,7 +119,7 @@ export default {
         text: "Qulay yotoq bilan jihozlangan keng va şinam xona o’z içiga: smart televizor, telefon, kiçik muzlatkiç seyf, kiyimlar uçun şkafni  oladi. Xammomda vanna urnatilingan. Xonaning umumiy maydoni 25m2. Uning narxiga nonuşta, alkogolsiz içimliklar bilan mini bar, sport zali va yozgi oçiq hovuz kiradi.  ",
         img: ["superior1", "superior2", "superior3"],
         id: "superior",
-        link: "booking?room-type=139606",
+        link: "booking?room-type=152646",
       }
     ]
   },
@@ -182,11 +185,16 @@ export default {
       phone: "Telefon raqami",
       message: "Habar",
       button: "Yuboriş"
-    }
+    },
+    contact: "Xabar yubormoq"
   },
   news: {
     title: "Yangiliklar",
     button: "Ko'proq"
+  },
+  article: {
+    error: 'Blog nashr etilmoqda ...',
+    button: "Orqaga"
   },
   bar: {
     title: "Меню",

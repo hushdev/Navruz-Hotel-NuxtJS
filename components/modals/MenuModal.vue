@@ -50,7 +50,7 @@ export default {
 }
 
 .modal {
-  animation: fade .5s ease-in-out forwards;
+  animation: fade 0.5s ease-in-out forwards;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -77,6 +77,8 @@ export default {
       position: absolute;
       top: 30px;
       right: 30px;
+      transform: scale(0.6);
+
       &:hover {
         img {
           transform: scale(0.95);

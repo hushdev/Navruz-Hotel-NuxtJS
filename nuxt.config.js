@@ -33,7 +33,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vue-session.js', mode: 'client' },
-    { src: '~/plugins/vue-meta.js' }
+    { src: '~/plugins/vue-meta.js', mode: 'client' },
+    { src: '~/plugins/vuelidate.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,10 +50,10 @@ export default {
     '@nuxtjs/i18n',
     ['nuxt-lazy-load', {
       // These are the default values
-      images: false,
-      videos: false,
-      audios: false,
-      iframes: false,
+      images: true,
+      videos: true,
+      audios: true,
+      iframes: true,
       native: false,
       polyfill: false,
       directiveOnly: false,
@@ -85,6 +86,10 @@ export default {
     ],
     defaultLocale: 'ru',
   },
+
+  serverMiddleware: [
+  ],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },

@@ -1,6 +1,7 @@
 export const state = () => ({
-  lang: 'ru',
   posts: [],
+  article: [],
+  lang: 'ru'
 })
 
 export const mutations = {
@@ -13,20 +14,25 @@ export const mutations = {
     if (value) {
       state.lang = value
     }
+  },
+  setArticle(state, value) {
+    if (value) {
+      state.article = value
+    }
   }
 }
 
 export const actions = {
   async fetchPosts({ commit }, lang) {
     try {
-      console.log('FETCH');
-      // await fetch(`http://localhost/wp-json/wp/v2/posts?filter[lang]=${lang}`)
-      //   .then((response) => {
-      //     return response.json()
-      //   })
-      //   .then((data) => {
-      //     commit('setPosts', data)
-      //   })
+      commit('setLang', lang)
+      await fetch(`http://localhost/wp-json/wp/v2/posts?filter[lang]=${lang}`)
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          commit('setPosts', data)
+        })
     }
     catch (error) {
       throw error;
@@ -36,5 +42,6 @@ export const actions = {
 
 export const getters = {
   getPosts: state => state.posts,
-  getLang: state => state.lang
+  getLang: state => state.lang,
+  getArticle: state => state.article
 }

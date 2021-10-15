@@ -1,21 +1,19 @@
 <template>
   <div class="news b-white pb-3">
-    <div class="container">
+    <div v-if="getPosts.length" class="container">
       <h2 class="h2 h2-decor t-gray">{{$t('home.news.title')}}</h2>
-      <div class="row fd-r jc-c ai-s fw-w">
+      <div class="row fd-r ai-s jc-c mt-3 fw-w">
         <div
-          v-for="(item, idx) in news"
+          v-for="(item, idx) in getPosts.slice(0, 3)"
           :key="idx"
-          class="card shadow mx-0-XS m-1"
+          class="card shadow fd-c ai-t jc-b w-40 w-100-XS mt-2 mr-1 ml-1 px-4 py-4"
         >
-          <img :src="item.img" :alt="item.name" />
-          <div class="content py-4 px-3">
-            <h3 class="h3 t-gray mb-2">{{ item.name }}</h3>
-            <p class="text t-black mb-3">
-              {{ item.text }}
-            </p>
-            <app-link :to="item.to" :text="$t('home.news.button')" />
+          <div>
+            <h3 class="h3 t-gray">{{ item.title.rendered }}</h3>
+            <div class="t-gray text-S my-1">{{ item.date.slice(0, 10) }}</div>
+            <p v-html="item.content.rendered.substr(0, 50)" class="t-gray text mb-4"></p>
           </div>
+          <app-link :to="`news/article`" @click.native="setArticle(item)" :text="$t('news.button')" class="text"/>
         </div>
       </div>
     </div>
@@ -23,30 +21,11 @@
 </template>
 
 <script>
-import newExample from "@/assets/index/news-example.png";
+import { mapGetters, mapMutations } from "vuex";
+
 export default {
-  data: () => ({
-    news: [
-      {
-        name: "Поздравляем с весенним праздником Навруз!",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        img: newExample,
-        to: "news/news-single",
-      },
-      {
-        name: "Поздравляем с весенним праздником Навруз!",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        img: newExample,
-        to: "news/news-single",
-      },
-      {
-        name: "Поздравляем с весенним праздником Навруз!",
-        text: "Уважаемые гости столицы! Гостиница Навруз поздравляет вас и ваших близких с прекрасным весенним праздником – Навруз!",
-        img: newExample,
-        to: "news/news-single",
-      },
-    ],
-  }),
+  computed: { ...mapGetters(["getPosts"]) },
+  methods: {...mapMutations(['setArticle'])}
 };
 </script>
 
@@ -72,6 +51,24 @@ export default {
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 834px) {
+  .news {
+    .row {
+      .card {
+        width: 47%;
+      }
+    }
+  }
+}
+@media (max-width: 610px) {
+  .news {
+    .row {
+      .card {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
 }
 </style>

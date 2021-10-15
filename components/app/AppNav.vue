@@ -21,6 +21,7 @@
               <nuxt-link
                 @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                 :to="switchLocalePath('ru')"
                 class="fd-r ai-c"
@@ -30,6 +31,7 @@
               <nuxt-link
                 @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                 :to="switchLocalePath('uz')"
                 class="mt-2 fd-r ai-c"
@@ -39,6 +41,7 @@
               <nuxt-link
                 @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                 :to="switchLocalePath('en')"
                 class="mt-2 fd-r ai-c"
@@ -55,7 +58,7 @@
           <li v-for="(item, idx) in menu" :key="idx">
             <nuxt-link
               :to="localePath(item.to)"
-              @click.native="mobile = !mobile"
+              @click.native="mobile = !mobile;fetchPosts();"
               active-class="fw-b t-brown"
               :exact="item.exact"
               class="decor-n t-gray fs-6-S"
@@ -81,6 +84,7 @@
                 <nuxt-link
                   @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                   :to="switchLocalePath('ru')"
                   class="fd-r ai-c"
@@ -90,6 +94,7 @@
                 <nuxt-link
                   @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                   :to="switchLocalePath('uz')"
                   class="mt-2 fd-r ai-c"
@@ -99,6 +104,7 @@
                 <nuxt-link
                   @click.native="
                     showLangs = !showLangs;
+                    fetchPosts();
                   "
                   :to="switchLocalePath('en')"
                   class="mt-2 fd-r ai-c"
@@ -122,9 +128,16 @@
 <script>
 export default {
   computed: {
-     menu() {
-      return this.$t('menu')
-    }
+    menu() {
+      return this.$t("menu");
+    },
+  },
+  methods: {
+    fetchPosts() {
+      setTimeout(() => {
+        this.$store.dispatch("fetchPosts", this.$i18n.locale);
+      }, 100);
+    },
   },
   data() {
     return {

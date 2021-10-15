@@ -1,5 +1,5 @@
 <template>
-  <button class="text t-white">
+  <button :disabled="disabled" :class="{disabled: disabled}" class="text t-white">
     <nuxt-link v-if="to" :to="to">{{ text }}</nuxt-link>
     <template v-if="!to">{{ text }}</template>
   </button>
@@ -17,11 +17,21 @@ export default {
       type: String,
       required: false,
     },
+    disabled: {
+      type: Boolean,
+      required: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.disabled {
+  &:hover,
+  &:focus {
+    background: #B99470;
+  }
+}
 button {
   display: block;
   width: 240px;
@@ -31,6 +41,7 @@ button {
   border: 0;
   outline: 0;
   transition: 0.2s;
+  cursor: pointer;
   a {
     color: #ffffff;
     display: block;
