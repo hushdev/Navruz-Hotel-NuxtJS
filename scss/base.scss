@@ -24,7 +24,7 @@ body, html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  position: relative;
+  outline: 0;
 }
 *::selection {
   background: #B99470;

@@ -10,7 +10,7 @@ export default {
     if (locale === "uz") {
       locale = "ru";
     }
-    // if (process.browser) {
+    if (process.browser) {
       var q = [
         ["setContext", "TL-INT-navruzhotel-uz", locale],
         [
@@ -39,6 +39,6 @@ export default {
         ).appendChild(s);
       }
     }
-  // },
+  },
 };
 </script>

@@ -26,7 +26,7 @@ export const actions = {
   async fetchPosts({ commit }, lang) {
     try {
       commit('setLang', lang)
-      await fetch(`http://localhost/wp-json/wp/v2/posts?filter[lang]=${lang}`)
+      await fetch(`https://navruzhotel.uz/wp-json/wp/v2/posts?filter[lang]=${lang}`)
         .then((response) => {
           return response.json()
         })
