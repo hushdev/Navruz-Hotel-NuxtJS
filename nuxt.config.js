@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Отель премиум класса в Ташкенте для бизнеса и отдыха. Забронируйте свой номер онлайн!' },
+      { hid: 'description', name: 'description', content: 'Уютный отель для бизнеса и отдыха в деловом центре Ташкента' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
