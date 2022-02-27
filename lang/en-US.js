@@ -116,7 +116,7 @@ export default {
       {
         name: "Suite",
         text: "Two-room suite with a comfortable bedroom with a king-size bed, where you can relax after a working day and a living room-study, for business meetings or midday rest. The total area of the room is 40 sq.m. Private bathroom with all the necessary individual accessories. The room rate includes breakfast, mini bar with soft drinks, gym and outdoor pool.",
-        img: ["suite1", "suite2", "suite3", "suite4", "suite5", "suite6", "suite7", "suite8"],
+        img: ["suite1", "suite2", "suite3", "suite4", "suite5", "suite6", "suite7", "suite8", "suite9", "suite10"],
         id: "suite",
         link: "booking?room-type=139607",
       },
@@ -150,21 +150,21 @@ export default {
       {
         name: 'A restaurant',
         text: 'Magnolia Restaurant serves a daily buffet breakfast from 06:30-10:30. The restaurant is also open for business lunches or dinners, family celebrations and other events.',
-        img: ['restoran1', 'restoran2', 'restoran3', 'restoran4', 'restoran5'],
+        img: ['restoran1', 'restoran2', 'restoran3', 'restoran4', 'restoran5', 'restoran6', 'restoran7', 'restoran8', 'restoran9', 'restoran10', 'restoran11', 'restoran12', 'restoran13', 'restoran14'],
         id: 'restaurant'
 
       },
       {
         name: "Bar",
         text: "The cozy Satellite Bar is open 24/7. Here guests can enjoy delicious coffee, a variety of cocktails, as well as snacks or hot meals. It is open 24/7.",
-        img: ["bar1", 'bar2', 'bar3', 'bar4', 'bar5', 'bar6',],
+        img: ["bar1", 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7', 'bar8', 'bar9', 'bar10', 'bar11', 'bar12', 'bar13',],
         id: 'bar'
 
       },
       {
         name: "Gym",
         text: "To keep fit, the hotel has a fitness room. It is open 24/7.",
-        img: ["gym1", "gym2", "gym3", "gym4", "gym5",],
+        img: ["gym1", "gym2", "gym3",],
         id: 'gym'
 
       },

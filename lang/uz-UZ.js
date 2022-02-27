@@ -103,7 +103,7 @@ export default {
       {
         name: "Suite",
         text: "Bu toifadagi xona ikki xonadan iborat bo’lib og’ir o’tgan iş kuningizni xonaning mehmonxonasida dam olib yoki biznes uçraşuvlaringizni rejalaştirsangiz bo’ladi. Keyingi xona esa yotoq xona.  Xonaning umumiy maydoni 40m2. Alohida ço’miliş uçun vanna xonasi mavjud va unda hamma kerakli bo’lgan aksessuarlar bilan ta’minlangan. ",
-        img: ["suite1", "suite2", "suite3", "suite4", "suite5", "suite6", "suite7", "suite8"],
+        img: ["suite1", "suite2", "suite3", "suite4", "suite5", "suite6", "suite7", "suite8", "suite9", "suite10"],
         id: "suite",
         link: "booking?room-type=139607",
       },
@@ -136,21 +136,21 @@ export default {
       {
         name: 'Restoran',
         text: 'Magnoliya restoranida soat 06:30-10:30 mehmonlar uçun nonuşta yoziladi. Şuningdek, restoran biznes tuşlik yoki keçki ovqat, oilaviy bayramlar va boşqa tadbirlar uçun har doim oçiq.  ',
-        img: ['restoran1', 'restoran2', 'restoran3', 'restoran4', 'restoran5'],
+        img: ['restoran1', 'restoran2', 'restoran3', 'restoran4', 'restoran5', 'restoran6', 'restoran7', 'restoran8', 'restoran9', 'restoran10', 'restoran11', 'restoran12', 'restoran13', 'restoran14'], 
         id: 'restaurant'
 
       },
       {
         name: "Bar",
         text: "Mehmonxonadagi bar - Satellite 24/7 işlaydi. Bu yerda mehmonlar şirin qahva, har xil kokteyl va şuningdek issiq ovqatlar buyurtma qilişlari mumkin. ",
-        img: ["bar1", 'bar2', 'bar3', 'bar4', 'bar5', 'bar6',],
+        img: ["bar1", 'bar2', 'bar3', 'bar4', 'bar5', 'bar6', 'bar7', 'bar8', 'bar9', 'bar10','bar11','bar12','bar13',],
         id: 'bar'
 
       },
       {
         name: "Fitnes zal",
         text: "Jismoniy holatni yaxşi uşlab turiş uçun mehmonxonada fitness zal taşkil qilingan va u keça-kunduz işlaydi.",
-        img: ["gym1", "gym2", "gym3", "gym4", "gym5",],
+        img: ["gym1", "gym2", "gym3",],
         id: 'gym',
 
 

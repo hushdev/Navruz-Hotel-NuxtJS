@@ -38,14 +38,13 @@ export default {
   data: () => ({
     checkIcon,
     settings: {
-      centerMode: true,
+      centerMode: false,
       centerPadding: "20px",
       focusOnSelect: true,
       infinite: true,
       variableWidth: true,
       variableHeight: true,
       slidesToScroll: 1,
-      dots: true,
       arrow: true,
     },
   }),
@@ -81,7 +80,7 @@ export default {
     div {
       img {
         width: auto;
-        max-height: 300px;
+        max-height: 270px;
         height: 100%;
         padding-right: 15px;
       }

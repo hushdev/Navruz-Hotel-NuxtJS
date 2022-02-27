@@ -42,7 +42,7 @@ export default {
       variableWidth: true,
       variableHeight: true,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       arrow: true,
     },
   }),
@@ -77,7 +77,7 @@ export default {
     div {
       img {
         width: auto;
-        max-height: 300px;
+        max-height: 270px;
         height: 100%;
         padding-right: 15px;
       }
