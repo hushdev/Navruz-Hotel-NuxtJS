@@ -219,10 +219,13 @@ export default {
         img: "salads",
         list: [
           { name: "Vitello tonnato", price: "132 000", desc: "(Thinly sliced roast beef, cooked by British recipe, tomato sauce, cherry tomatoes, arugula, capers)" },
-          { name: "Caprese", price: "55 000", desc: "(Mozzarella cheese, ripe tomatoes, pesto sauce, watercress, balsamic cream)" },
+          { name: "Caprese", price: "65 000", desc: "(Mozzarella cheese, ripe tomatoes, pesto sauce, watercress, balsamic cream)" },
           { name: "Veal tenderloin salad", price: "86 000", desc: "(Grilled veal fillet, fresh lettuce, cherry tomatoes, olives, sweet and sour sauce, parmesan cheese)" },
+          { name: "Niçoise Salad", price: "80 000", desc: "(Traditional French salad, boiled potatoes, eggs, capers, green peas and lettuce)" },
           { name: "Salmon salad", price: "115 000", desc: "(Mix salad dressed with French sauce, cherry tomatoes, oranges, salmon in unagi sauce in sesame breading)" },
-          { name: "Roasted beef salad", price: "75 000", desc: "(Thinly sliced roast beef, cooked by British recipe, baked vegetables, mix salad, blue sauce, cherry tomatoes)" },
+          { name: "Roast beef salad", price: "80 000", desc: "(Thinly sliced roast beef, cooked by British recipe, baked vegetables, mix salad, blue sauce, cherry tomatoes)" },
+          { name: "Greek Salad", price: "65 000", desc: "(Mix salad with fresh vegetables, arugula, feta cheese, olives, dressed with olive oil and balsamic vinegar)"},
+          {name: "Caesar Chiken Salad", price: "65 000", desc: "(Crispy romaine lettuce leaves, cherry tomatoes, croutons, chicken fillet, Caesar sauce, parmesan)"}
         ]
       },
       {
@@ -233,19 +236,16 @@ export default {
             name: "Grilled cheese with Sicilian salad", price: "85 000"
           },
           {
-            name: "BBQ chicken wings", price: "43 000"
+            name: "BBQ chicken wings", price: "55 000"
           },
           {
-            name: "Garlic croutons", price: "12 000"
-          },
-          {
-            name: "Garlic croutons", price: " 23 000"
+            name: "Garlic croutons", price: "28 000"
           },
           {
             name: "Beer prawns with cocktail sauce", price: "98 000"
           },
           {
-            name: "Fried potatoes with mushrooms", price: "22 000"
+            name: "Fried potatoes with mushrooms", price: "25 000"
           },
           {
             name: "Grilles vegetables", price: "24 000"
@@ -256,136 +256,102 @@ export default {
         title: "Soups",
         img: "soups",
         list: [
-          { name: "Lentil cream soup", price: "18 000" },
-          { name: "Parmentier cream soup with mushrooms", price: "28 000", desc: "(Potatoes, champignons)" },
-          { name: "Lamb shurpa", price: "33 000", desc: "(Uzbek national lamb soup with vegetables)" },
-          { name: "Curry soup", price: "35 000", desc: "(Curry soup with mushrooms and chicken meatballs, cream)" }
+          { name: "Creamy lentil soup", price: "20 000" },
+          { name: "Creamy mushroom soup", price: "28 000", desc: "(Loaded with lots of mushrooms and potatoes)" },
+          { name: "Curry soup", price: "35 000", desc: "(Curry soup with mushrooms and chicken meatballs, cream)" },
+          { name: "Bouillabaisse soup", price: "75 000", desc: "(Tomato soup, salmon, pike perch, shrimps, mussels, squid, white wine)" },
         ]
       },
       {
         title: "Pasta",
         img: "pasta",
         list: [
-          { name: "Spaghetti with cuttlefish ink", price: "85 000", desc: "(pasta with creamy sauce, salmon)" },
-          { name: "Spaghetti Bolognese", price: "55 000 ", desc: "(pasta with classic Italian minced beef sauce, based on tomato sauce)" },
-          { name: "Penne Arabyata", price: "45 000", desc: "(pasta with tomato-based sauce, sundried tomatoes, basil, celery and chili peppers)" },
-          { name: "Fettuccine Alfredo", price: "54 000", desc: "(pasta with chicken breast and mushrooms sauce in a creamy sauce)" },
-          { name: "Buckwheat noodles with beef and vegetables", price: "81 000" }
+          { name: "Black spaghetti with salmon", price: "105 000", desc: "(pasta with creamy sauce, salmon)" },
+          { name: "Spaghetti Bolognese", price: "75 000 ", desc: "(pasta with classic Italian minced beef sauce, based on tomato sauce)" },
+          { name: "Penne Arabyata", price: "65 000", desc: "(pasta with tomato-based sauce, sundried tomatoes, basil, celery and chili peppers)" },
+          { name: "Fettuccine Alfredo", price: "65 000", desc: "(pasta with chicken breast and mushrooms sauce in a creamy sauce)" },
+          { name: "Asparagus risotto", price: "95 000", desck: "(Arborio Italian rice, green asparagus, white wine, saffron)"},
+          { name: "Buckwheat noodles with beef and vegetables", price: "85 000", desc: "(fragrant buckwheat noodles with tender beef, fresh vegetables and soy sauce)"}
         ]
       },
       {
         title: "Main courses",
         img: "hot2",
         list: [
-          { name: "Salmon with broccoli puree", price: "160 000", desc: "(Salmon fillet fried with herbs, broccoli puree, asparagus, cherry tomatoes, pesto sauce)" },
-          { name: "Beef langets with salsa", price: "100 000", desc: "(Tender pieces of veal, spicy pineapple salsa, arugula, cherry tomatoes, balsamic cream, blue cheese sauce)" },
-          { name: "Grilled chicken breast with zucchini", price: "65 000", desc: "(Chicken breast fillet served with grilled zucchini and creamy soy sauce)" },
-          { name: "Mignon steak with pepper sauce", price: "130 000", desc: "(Beef tenderloin fried with herbs and spices, fried potatoes with cilantro, pepper sauce)" },
-          { name: "T-bone steak", price: "165 000", desc: "(Tender beef fried with herbs and spices, grilled asparagus, mushroom sauce)" },
-          { name: "Ossobuco steak", price: "115 000", desc: "(Braised veal shank, fried vegetables, Demiglas sauce)" }
+          { name: "T-bone Steak", price: "360 000", desc: "(Nourishing steak, which got its name from the T-shaped bone. It separates two different parts of the meat in it: the strip loin from the thin edge and the tender meat of the middle part of the tenderloin. Served with grilled asparagus, mushroom sauce)" },
+          { name: "Ribeye Steak", price: "345 000", desc: "(Rib-eye steaks are tender, juicy and very flavorful, with just the right amount of fat. Coming from the lightly worked upper rib cage area which spans from the sixth to twelfth ribs of the cattle. Potato crockets, BBQ sauce)" },
+          { name: "New York Steak", price: "325 000", desc: "(A steak from a short loin of marbled beef is considered premium. A thin layer of fat makes the meat juicier and more flavorful. Served with grilled vegetables, pepper sauce)" },
+          { name: "Ossobuco Steak", price: "185 000", desc: "(Ossobuco is a traditional Italian dish of stewed veal shank with vegetables in Demiglas sauce. From the Italian Ossobuco literally means \"hollow bone\")" },
+          { name: "Beef ribs with mustard sauce", price: "225 000", desc: "(For two person) (Juicy, off-the-bone meat baked with herbs, fried potatoes with mushrooms, mustard sauce)" },
         ]
       },
       {
         title: "Pizza & Burgers",
         img: "pizza",
         list: [
-          { name: "Pizza Julien", price: "71 000" },
-          { name: "Pizza Margarita", price: "60 000" },
+          { name: "Pizza Julien", price: "85 000" },
+          { name: "Pizza Margarita", price: "75 000" },
           { name: "Pizza Al Salmone", price: "120 000" },
-          { name: "Pizza Pepperoni", price: "65 000" },
-          { name: "Hamburger", price: "50 000" },
-          { name: "Cheeseburger", price: "55 000" },
-          { name: "Chicken burger", price: "40 000" },
+          { name: "Pizza Pepperoni", price: "80 000" },
+          { name: "Hamburger", price: "55 000" },
+          { name: "Cheeseburger", price: "60 000" },
+          { name: "Chicken burger", price: "45 000" },
           { name: "Club sandwich", price: "65 000" }
         ]
       }
     ],
     items2: [
       {
-        title: "Hot Drinks",
+        title: "Tea / Coffee",
         img: "hotDrinks",
-        multiList: [
-          {
-            category: "Coffee ",
-            list: [
-              { name: "Amerikano", price: "20 000" },
-              { name: "Espresso", price: "20 000" },
-              { name: "Long-Black", price: "20 000", desc: "(Double Espresso)" },
-              { name: "Cappuccino", price: "25 000", desc: "(Espresso, milk)" },
-              { name: "Latte-Macchiato", price: "25 000", desc: "(Espresso, milk)" },
-              { name: "Con-Panna", price: "25 000", desc: "(Espresso, whipped cream, cocoa)" },
-              { name: "Coffee-Yupp", price: "28 000", desc: "(Espresso, milk, berry syrup)" },
-              { name: "Raph Coffee", price: "30 000", desc: "(Espresso, milk, cream, vanilla syrup, cocoa)" },
-              { name: "Viennese Coffee", price: "30 000", desc: "(Americano, whipped cream, chocolate topping, grated chocolate)" },
-              { name: "Mochacino with Nutella", price: "30 000", desc: "(Espresso, milk, Nutella chocolate, chocolate topping)" },
-              { name: "Flat-White", price: "32 000", desc: "(Double espresso, milk, syrups: hazelnut, caramel)" },
-              { name: "Pistachio Cappuccino", price: "35 000", desc: "(Espresso, milk, pistachio syrup, ground pistachio)" },
-            ]
-          },
-          {
-            category: "Tea",
-            list: [
-              { name: "Simple Black Tea", price: "8 000" },
-              { name: "Earl-Grey", price: "10 000" },
-              { name: "English Breakfast", price: "10 000 " },
-              { name: "Old traditional tested green tea 95", price: "10 000 " },
-              { name: "Jasmine green tea", price: "15 000" },
-              { name: "Herbal Tea", price: "15 000", desc: "(Two type of thyme, Melissa, chamomile)" },
-              { name: "Spiced tea-latte", price: "25 000", desc: "(Milk, honey, clove, cinnamon)" },
-              { name: "Navruz Tea", price: "25 000", desc: "(Rosemary, jasmine, orange, lemon, clove, sugar syrup)" },
-              { name: "Tea Fruit-Bowl", price: "30 000", desc: "(Hibiscus, orange, sauer-mix, apple, mint, dried apricots, passion fruit syrup)" },
-              { name: "Ginger-Extra", price: "40 000", desc: "(Ginger, sea buckthorn, honey, orange juice, lemon, mint)" },
-            ]
-          },
-          {
-            category: "Althaus Tea",
-            list: [
-              { name: "Green Tea: Sencha Senpai", price: "15 000" },
-              { name: "Green Tea: Jasmine Ting Yuan", price: "15 000" },
-              { name: "Black Tea: Asam Meleng", price: "15 000" },
-              { name: "Black Tea: English Breakfast St. Andrews", price: "15 000" },
-              { name: "Black Tea: Royal Earl Grey", price: "15 000" },
-            ]
-          },
-          {
-            category: "Other",
-            list: [
-              { name: "Last Fall", price: "13 000", desc: "(Milk, maple syrup, cinnamon)" },
-              { name: "Sweat Cocoa", price: "25 000", desc: "(Milk, cocoa, cookie)" },
-            ]
-          }
+        list: [
+          {name: "Espresso", price: "20 000"},
+          {name: "Americano", price: "20 000"},
+          {name: "Cappuccino", price: "25 000"},
+          {name: "Latte", price: "25 000"},
+          {name: "Ginger and Sea buckthirns Tea", price: "40 000"},
+          {name: "Navruz special Tea", price: "25 000", desc: "Rosemary, jasmine, citruses, honey and warm spices"},
+          {name: "Berries Pot Tea", price: " 40 000"},
+          {name: "Fruit Bowl Tea", price: "30 000"},
+          {name: "Classic Tea", price: "10 000", desc: "Black, earl grey, green and jasmine"}
         ]
       },
       {
-        title: "Lemonades",
+        title: "Cold drinks",
         img: "iceDrinks",
         list: [
-          { name: "Raspberry-Sauer", price: "17 000", desc: "(Orange juice, sauer-mix, raspberry syrup, mint, white egg)" },
-          { name: "Navruz Fizz", price: "22 000", desc: "(Lychee syrup, hibiscus, maple syrup, sparkling water)" },
-          { name: "Orange Berry", price: "40 000", desc: "(Orange, mixed berry puree, berry syrup, sauer-mix, sparkling water)" }
+          {name: "Raspberry Sour", price: "30 000", desc: "(Orange and lemon juices, raspberry syrup, egg white optional)"},
+          {name: "Well Behaved", price: "30 000", desc: "(Cranberry juice, mango puree, coconut syrup, lemon juice, soda)"},
+          {name: "Coca Cola, Fanta, Sprite 0,25", price: "10 000"},
+          {name: "Schweppes 0,33", price: "25 000"},
+          {name: "Energy Drink 18+", price: "15 000"},
+          {name: "Borjomi mineral water", price: "30 000"},
+          {name: "Fresh orange juice", price: "35 000"},
+          {name: "Fresh carrot juice", price: "15 000"},
+          {name: "Fresh apple juice", price: "25 000"}
         ]
       },
       {
         title: "Alcohol Cocktails",
         img: "alcoDrinks",
         list: [
-          { name: "Bloody-Mary", price: "35 000", desc: "(Vodka, sauer-mix, honey, tomato juice, Angostura Bitter)" },
-          { name: "Cuba-Libre", price: "45 000", desc: "(Rum, sauer-mix, Coca-Cola)" },
-          { name: "Cosmopolitan-Cherry", price: "45 000 ", desc: "(Vodka, cherry juice, sauer-mix, Cointreau, cheery syrup, Angostura Bitter)" },
-          { name: "Sweet-Passion", price: "45 000", desc: "(Rum Bacardi, orange, passion fruit syrup, caramel syrup, hazelnut syrup, sauer-mix, egg white)" },
-          { name: "White Russian Special", price: "50 000", desc: "(Vodka, Beiley’s, espresso, cream)" },
-          { name: "Clover-Club", price: "55 000", desc: "(Gin, sauer-mix, raspberry syrup, white egg, Angostura Bitter)" },
-          { name: "Gin-Tonic", price: "75 000", desc: "(Gin, tonic water, lime-lemon, rosemary)" },
-          { name: "Sidecar", price: "75 000", desc: "(Cognac Hennesy V.S., Cointreau, sauer-mix, sugar syrup)" },
+          {name: "La Villa Negroni", price: "65 000", desc: "(Gin, sweet vermouth, Aperol, Porto and sparkling wine)"},
+          {name: "French 76", price: "55 000", desc: "(Gin, elderberry liquor, green apple syrup, sparkling wine)"},
+          {name: "Buckwheat sour", price: "55 000", desc: "(Buckwheat infused vodka, lemon juice, ginger syrup, egg white)"},
+          {name: "Lemon Cake Sour", price: "70 000", desc: "(Scotch whiskey, Limoncello, lemon juice, egg white and vanilla syrup"},
+          {name: "Copper nail", price: "70 000", desc: "(Fine Scotch whiskey, Drambuie and Cynar liquors)"},
+          {name: "Unami Margarita", price: "65 000", desc: "(Tequila blanca, coconut liquor, mango puree, peach and lime juices)"},
+          {name: "Nobel Espresso", price: "60 000", desc: "(Spiced rum, cacao liquor, ginger cookie syrup and freshly brewed espresso)"},
+          {name: "Magic strings of Tanbour", price: "55 000", desc: "(Matured brandy, cacao liquor, banana puree, lemon juice)"},
         ]
       },
       {
         title: "Milkshakes",
         img: "milkShakes",
         list: [
-          { name: "Freak’ Shake Ginger Cookie", price: "22 000", desc: "(Milk, ice cream, ginger cookie syrup, cookie, whipped cream)" },
-          { name: "Caramel Shake", price: "25 000", desc: "(Milk, ice cream, caramel syrup, salt caramel syrup, whipped cream)" },
-          { name: "Chocolate shake", price: "30 000", desc: "(Milk, chocolate topping, ice cream, Nutella chocolate)" },
+          { name: "Freak’ Shake Ginger Cookie", price: "40 000", desc: "(Milk, ice cream, ginger cookie syrup, cookie, whipped cream)" },
+          { name: "Caramel Shake", price: "40 000", desc: "(Milk, ice cream, caramel syrup, salt caramel syrup, whipped cream)" },
+          { name: "Chocolate shake", price: "40 000", desc: "(Milk, chocolate topping, ice cream, Nutella chocolate)" },
           { name: "Banana Shake", price: "40 000", desc: "(Milk, banana syrup, banana, ice cream, whipped cream)" },
         ]
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="modal">
-    <div class="modal-wrap shadow">
+    <div class="modal-wrap shadow" :class="{'modal-wrap-column': data.multilist}">
       <button @click="$emit('closeModal')">
         <img src="@/assets/close.svg" alt="Закрыть" />
       </button>
